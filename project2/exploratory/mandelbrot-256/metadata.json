@@ -1,0 +1,37 @@
+{
+  "case": "mandelbrot",
+  "size": 256,
+  "compiler_command": [
+    "/opt/riscv/bin/riscv64-unknown-elf-g++",
+    "-march=rv64imaf",
+    "-mabi=lp64f",
+    "-mno-relax",
+    "-nostartfiles",
+    "-emain",
+    "-Wstack-usage=512",
+    "-O3",
+    "-ffp-contract=off",
+    "-I",
+    "/root/arches/include",
+    "-I",
+    "/root/arches/src/trax-kernel",
+    "/root/arches/src/trax-kernel/main.cpp",
+    "-o",
+    "/root/arches/src/trax-kernel/riscv/kernel"
+  ],
+  "simulation_command": [
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=teapot",
+    "--framebuffer-width=256",
+    "--framebuffer-height=256",
+    "--pregen-rays=0",
+    "--logging-interval=100000"
+  ],
+  "wall_seconds": 1.3738188890274614,
+  "returncode": 0,
+  "upstream": "97bebdcd75948baf72d6334890d2793ccd66afe6",
+  "source_sha256": "815dca1ceff7cf74561f9c83194154903c85830084973e72cc4bb127a32e21a2",
+  "kernel_sha256": "7f03422ad4807683b51950da2ebd12a9e2d3642cdb55f8d98d0cdb27b442d3a4"
+}

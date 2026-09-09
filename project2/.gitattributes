@@ -1,0 +1,6 @@
+# PDFs can have long ASCII prefixes: explicitly keep them binary.
+*.pdf binary
+*.png binary
+# Preserve original simulator output, including CRLF and trailing spaces.
+*_log.txt -text -whitespace
+*.log -text -whitespace

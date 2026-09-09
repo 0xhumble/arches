@@ -1,0 +1,20 @@
+{
+  "gradient-256": {
+    "expected_written_pixels": 65536,
+    "mismatched_pixels": 0
+  },
+  "mandelbrot-256": {
+    "pixels": 65536,
+    "mismatched_pixels": 2,
+    "opaque_pixels": 65534
+  },
+  "mandelbrot-512": {
+    "pixels": 262144,
+    "mismatched_pixels": 0,
+    "opaque_pixels": 262144
+  },
+  "single-pass-256": {
+    "expected_written_pixels": 23552,
+    "mismatched_pixels": 0
+  }
+}

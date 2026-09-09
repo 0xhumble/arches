@@ -1,0 +1,38 @@
+{
+  "case": "single-pass",
+  "size": 256,
+  "compiler_command": [
+    "/opt/riscv/bin/riscv64-unknown-elf-g++",
+    "-march=rv64imaf",
+    "-mabi=lp64f",
+    "-mno-relax",
+    "-nostartfiles",
+    "-emain",
+    "-Wstack-usage=512",
+    "-O3",
+    "-ffp-contract=off",
+    "-I",
+    "/root/arches/include",
+    "-I",
+    "/root/arches/src/trax-kernel",
+    "-DGRADIENT_SINGLE_PASS",
+    "/root/arches/project2/gradient.cpp",
+    "-o",
+    "/root/arches/src/trax-kernel/riscv/kernel"
+  ],
+  "simulation_command": [
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=teapot",
+    "--framebuffer-width=256",
+    "--framebuffer-height=256",
+    "--pregen-rays=0",
+    "--logging-interval=100000"
+  ],
+  "wall_seconds": 0.5944835250265896,
+  "returncode": 0,
+  "upstream": "97bebdcd75948baf72d6334890d2793ccd66afe6",
+  "source_sha256": "1b6ad1bdae7d9d61e518f22332861e354d7fc2a969a97908e7da4de96b3d3c50",
+  "kernel_sha256": "5986851b9205c642543d21b88e21b2667c2a2f88f1bf54c87271cffff681d4c0"
+}

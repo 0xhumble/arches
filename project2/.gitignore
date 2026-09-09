@@ -1,0 +1,7 @@
+# Preserve the original experimental evidence despite root-level ignores.
+!*.pdf
+!*.png
+!*.log
+!*_log.txt
+__pycache__/
+reruns/
