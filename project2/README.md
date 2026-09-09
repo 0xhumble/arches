@@ -13,7 +13,7 @@
 ## 成果
 
 - `../src/trax-kernel/main.cpp`：最终提交 kernel，512×512 彩色 Mandelbrot，96 次迭代上限。
-- `report.pdf`：3 页英文报告，回答作业全部四个问题，含渐变、无循环对照、正式分形及异常试跑说明。
+- `report.pdf`：1 页最简英文报告，仅含作业四个问题的答案和生成的图片。
 - `report.typ`：可编辑的报告源文件。
 - `results/mandelbrot-512/`：正式原始图片、日志、源码快照、ELF、反汇编、编译日志、命令与 SHA-256 元数据。
 - `results/gradient-256/` 与 `results/single-pass-256/`：讲义渐变和去掉循环的对照。
