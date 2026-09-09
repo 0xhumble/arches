@@ -25,7 +25,5 @@ An execution model specifies how threads execute, are grouped, and interact. TRa
   columns: (1fr, 1fr),
   gutter: 12pt,
   figure(image("results/gradient-256/out.png", width: 53mm), caption: [Color gradient, 256 × 256.]),
-  figure(box(stroke: 0.4pt + gray, image("results/single-pass-256/out.png", width: 53mm)), caption: [Without the loop, 256 × 256.]),
-  figure(image("exploratory/mandelbrot-256/out.png", width: 53mm), caption: [Mandelbrot trial, 256 × 256.]),
   figure(image("results/mandelbrot-512/out.png", width: 53mm), caption: [Mandelbrot submission, 512 × 512.]),
 )
