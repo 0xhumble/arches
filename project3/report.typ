@@ -12,7 +12,7 @@
 #align(center)[
   #image("results/part-a-350/out.png", width: 2.85in)
   #linebreak()
-  Page 5 kernel, unmodified mapping; 350 × 350 framebuffer.
+  350 × 350
 ]
 
 == B. Primary ray visibility
@@ -28,7 +28,3 @@
     (b) `--scene-name=teapot` · 350 × 350
   ],
 )
-
-Each 32-thread tile processes a 4 × 8 pixel region. Rounded-up tile counts and bounds checks handle partial edge tiles without mixing distant pixels. One camera ray is traced per valid pixel using `_traceray<0x0U>(0, ray, hit)`; hits are red and misses dark gray.
-
-Simulator termination fixes prevent repeated halt counting and drain pending framebuffer stores. Both visibility images match a CPU brute-force triangle-intersection reference at every pixel. Submitted separately: `main.cpp` and one `trax_log.txt` containing both Part B runs.

@@ -3,7 +3,6 @@
 import hashlib
 import json
 from pathlib import Path
-import shlex
 import shutil
 import typst
 
@@ -23,9 +22,7 @@ for scene in ('triangle', 'teapot'):
     assert metadata['returncode'] == 0
     assert metadata['source_sha256'] == hashlib.sha256(source.read_bytes()).hexdigest()
     assert source.read_bytes() == (result / 'main.cpp').read_bytes()
-    logs += [f'===== Part B: {scene}, 350 x 350 =====\n',
-             'Command: ' + shlex.join(metadata['simulation_command']) + '\n\n',
-             (result / 'trax_log.txt').read_text(), '\n']
+    logs += [(result / 'trax_log.txt').read_text(), '\n']
 shutil.copy2(source, submission / 'main.cpp')
 (submission / 'trax_log.txt').write_text(''.join(logs))
 typst.compile(str(project / 'report.typ'), output=str(submission / 'report.pdf'), root=str(project))

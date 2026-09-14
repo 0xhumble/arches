@@ -1,6 +1,3 @@
-===== Part B: triangle, 350 x 350 =====
-Command: /root/arches/build/src/arches-v2/arches-v2 --arch-name=TRaX --dataset-dir=/root/datasets --scene-name=triangle --framebuffer-width=350 --framebuffer-height=350 --pregen-rays=0 --logging-interval=100000
-
 Simulation Parameters
 arch-id: 0
 arch-name: TRaX
@@ -692,9 +689,6 @@ MRays/J: inf
 Simulation rate: 12.66 KHz
 Simulation time: 2 s
 MSIPS: 37.28
-
-===== Part B: teapot, 350 x 350 =====
-Command: /root/arches/build/src/arches-v2/arches-v2 --arch-name=TRaX --dataset-dir=/root/datasets --scene-name=teapot --framebuffer-width=350 --framebuffer-height=350 --pregen-rays=0 --logging-interval=100000
 
 Simulation Parameters
 arch-id: 0
