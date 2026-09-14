@@ -1,0 +1,23 @@
+{
+  "mapping": {
+    "dimensions_tested": 1095,
+    "complete_unique_coverage": true
+  },
+  "part_a": {
+    "pixel_mismatches": 0,
+    "unwritten_pixels": 700,
+    "out_of_framebuffer_writes_in_original": 700
+  },
+  "triangle": {
+    "pixel_mismatches": 0,
+    "hit_pixels": 12250,
+    "miss_pixels": 110250,
+    "all_pixels_opaque": true
+  },
+  "teapot": {
+    "pixel_mismatches": 0,
+    "hit_pixels": 6016,
+    "miss_pixels": 116484,
+    "all_pixels_opaque": true
+  }
+}

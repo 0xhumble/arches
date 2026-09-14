@@ -1,0 +1,23 @@
+{
+  "repeat_runs": {
+    "triangle": {
+      "identical_runs_including_final": 3,
+      "png_sha256": "919fd2e75bfbde9f73ec8f79316baae24b7e9e79a58188f0a610f0547c4e4d79"
+    },
+    "teapot": {
+      "identical_runs_including_final": 3,
+      "png_sha256": "c8b732ed6871b0bda49f98cb5defb099ef495dd09130654a832f938bd8d413dd"
+    }
+  },
+  "termination_regression": {
+    "original": {
+      "transparent_pixels": 53
+    },
+    "store_drain_only": {
+      "transparent_pixels": 5
+    },
+    "both_fixes": {
+      "transparent_pixels": 0
+    }
+  }
+}

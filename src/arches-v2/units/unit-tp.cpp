@@ -85,7 +85,8 @@ void UnitTP::_clear_register_pending(uint thread_id, ISA::RISCV::DstReg dst)
 	if (is_int(dst.type)) thread.int_regs_pending[dst.index] = 0;
 	else                  thread.float_regs_pending[dst.index] = 0;
 
-	if(_check_dependancies(thread_id) == 0)
+	// Late SFU/load returns must not re-enqueue an already halted thread.
+	if(thread.pc != 0x0ull && _check_dependancies(thread_id) == 0)
 		 _thread_exec_arbiter.add(thread_id);
 }
 
@@ -261,6 +262,13 @@ void UnitTP::clock_fall()
 	uint thread_id = _thread_exec_arbiter.get_index();
 	if(thread_id == ~0u) thread_id = _last_thread_id;
 	ThreadData& thread = _thread_data[thread_id];
+	// The fallback may be a halted thread while other threads await returns.
+	// Do not execute its stale RET again and count the same halt repeatedly.
+	if(thread.pc == 0x0ull)
+	{
+		_thread_exec_arbiter.remove(thread_id);
+		return;
+	}
 
 	DecodePhase stall_phase;
 	ISA::RISCV::InstrType stall_type;

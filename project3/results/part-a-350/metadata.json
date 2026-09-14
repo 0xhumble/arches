@@ -1,0 +1,39 @@
+{
+  "case": "part-a",
+  "size": 350,
+  "compiler_command": [
+    "/opt/riscv/bin/riscv64-unknown-elf-g++",
+    "-march=rv64imaf",
+    "-mabi=lp64f",
+    "-mno-relax",
+    "-nostartfiles",
+    "-emain",
+    "-Wstack-usage=512",
+    "-O3",
+    "-ffp-contract=off",
+    "-I",
+    "/root/arches/include",
+    "-I",
+    "/root/arches/src/trax-kernel",
+    "/root/arches/project3/part_a.cpp",
+    "-o",
+    "/root/arches/src/trax-kernel/riscv/kernel"
+  ],
+  "simulation_command": [
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=teapot",
+    "--framebuffer-width=350",
+    "--framebuffer-height=350",
+    "--pregen-rays=0",
+    "--logging-interval=100000"
+  ],
+  "wall_seconds": 1.1156401210464537,
+  "returncode": 0,
+  "upstream": "97bebdcd75948baf72d6334890d2793ccd66afe6",
+  "source_sha256": "fecd59e7724e2ab95487e6d528247bb1d94f06c824a6a1747a817f60d1bed6b3",
+  "kernel_sha256": "7b2023b1dff836b3427341897769b52b3569a72448970e8f597868b535c779a8",
+  "simulator_sha256": "9be50548c810ca120ab6fe91898c7008737804affaf4de1a5d5faeab949867c8",
+  "simulator_store_drain_fix": true
+}

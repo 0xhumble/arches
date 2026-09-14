@@ -1,0 +1,111 @@
+
+/root/arches/project3/results/part-a-350/kernel:     file format elf64-littleriscv
+/root/arches/project3/results/part-a-350/kernel
+architecture: riscv:rv64, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000000100e8
+
+Program Header:
+0x70000003 off    0x0000000000000231 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
+         filesz 0x0000000000000050 memsz 0x0000000000000000 flags r--
+    LOAD off    0x0000000000000000 vaddr 0x0000000000010000 paddr 0x0000000000010000 align 2**12
+         filesz 0x0000000000000218 memsz 0x0000000000000218 flags r-x
+   STACK off    0x0000000000000000 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**4
+         filesz 0x0000000000000000 memsz 0x0000000000000000 flags rw-
+
+Sections:
+Idx Name          Size      VMA               LMA               File off  Algn
+  0 .text         00000108  00000000000100e8  00000000000100e8  000000e8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .eh_frame     00000028  00000000000101f0  00000000000101f0  000001f0  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  2 .comment      00000019  0000000000000000  0000000000000000  00000218  2**0
+                  CONTENTS, READONLY
+  3 .riscv.attributes 00000050  0000000000000000  0000000000000000  00000231  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000000100e8 l    d  .text	0000000000000000 .text
+00000000000101f0 l    d  .eh_frame	0000000000000000 .eh_frame
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 l    d  .riscv.attributes	0000000000000000 .riscv.attributes
+0000000000000000 l    df *ABS*	0000000000000000 part_a.cpp
+0000000000011a18 g       *ABS*	0000000000000000 __global_pointer$
+0000000000011218 g       .eh_frame	0000000000000000 __SDATA_BEGIN__
+0000000000011218 g       .eh_frame	0000000000000000 __BSS_END__
+0000000000011218 g       .eh_frame	0000000000000000 __bss_start
+00000000000100e8 g     F .text	0000000000000108 main
+0000000000011218 g       .eh_frame	0000000000000000 __DATA_BEGIN__
+0000000000011218 g       .eh_frame	0000000000000000 _edata
+0000000000011218 g       .eh_frame	0000000000000000 _end
+
+
+
+Disassembly of section .text:
+
+00000000000100e8 <main>:
+   100e8:	10802503          	lw	a0,264(zero) # 108 <main-0xffe0>
+   100ec:	0000070b          	.insn	4, 0x070b
+   100f0:	0007071b          	sext.w	a4,a4
+   100f4:	08a77063          	bgeu	a4,a0,10174 <main+0x8c>
+   100f8:	10002883          	lw	a7,256(zero) # 100 <main-0xffe8>
+   100fc:	00100793          	li	a5,1
+   10100:	11003803          	ld	a6,272(zero) # 110 <main-0xffd8>
+   10104:	06f89c63          	bne	a7,a5,1017c <main+0x94>
+   10108:	0057579b          	srliw	a5,a4,0x5
+   1010c:	00000613          	li	a2,0
+   10110:	02c7f6bb          	remuw	a3,a5,a2
+   10114:	03b71893          	slli	a7,a4,0x3b
+   10118:	03d8d593          	srli	a1,a7,0x3d
+   1011c:	00377713          	andi	a4,a4,3
+   10120:	00e585b3          	add	a1,a1,a4
+   10124:	ff010737          	lui	a4,0xff010
+   10128:	f0070713          	addi	a4,a4,-256 # ffffffffff00ff00 <__global_pointer$+0xfffffffffeffe4e8>
+   1012c:	02c7d7bb          	divuw	a5,a5,a2
+   10130:	0026961b          	slliw	a2,a3,0x2
+   10134:	00b6063b          	addw	a2,a2,a1
+   10138:	00d7c6b3          	xor	a3,a5,a3
+   1013c:	0037979b          	slliw	a5,a5,0x3
+   10140:	00c787bb          	addw	a5,a5,a2
+   10144:	03f69593          	slli	a1,a3,0x3f
+   10148:	02079613          	slli	a2,a5,0x20
+   1014c:	01e65793          	srli	a5,a2,0x1e
+   10150:	03f5d693          	srli	a3,a1,0x3f
+   10154:	00f807b3          	add	a5,a6,a5
+   10158:	00069663          	bnez	a3,10164 <main+0x7c>
+   1015c:	ff000737          	lui	a4,0xff000
+   10160:	0ff70713          	addi	a4,a4,255 # ffffffffff0000ff <__global_pointer$+0xfffffffffefee6e7>
+   10164:	00e7a023          	sw	a4,0(a5)
+   10168:	0000070b          	.insn	4, 0x070b
+   1016c:	0007071b          	sext.w	a4,a4
+   10170:	f8a76ce3          	bltu	a4,a0,10108 <main+0x20>
+   10174:	00000513          	li	a0,0
+   10178:	00008067          	ret
+   1017c:	0028d31b          	srliw	t1,a7,0x2
+   10180:	0057579b          	srliw	a5,a4,0x5
+   10184:	0267d6bb          	divuw	a3,a5,t1
+   10188:	03b71593          	slli	a1,a4,0x3b
+   1018c:	03d5d613          	srli	a2,a1,0x3d
+   10190:	00377713          	andi	a4,a4,3
+   10194:	ff0105b7          	lui	a1,0xff010
+   10198:	f0058593          	addi	a1,a1,-256 # ffffffffff00ff00 <__global_pointer$+0xfffffffffeffe4e8>
+   1019c:	0267f7bb          	remuw	a5,a5,t1
+   101a0:	00369e1b          	slliw	t3,a3,0x3
+   101a4:	01c60633          	add	a2,a2,t3
+   101a8:	0316063b          	mulw	a2,a2,a7
+   101ac:	00d7c6b3          	xor	a3,a5,a3
+   101b0:	0027979b          	slliw	a5,a5,0x2
+   101b4:	00e787bb          	addw	a5,a5,a4
+   101b8:	03f69e13          	slli	t3,a3,0x3f
+   101bc:	03fe5693          	srli	a3,t3,0x3f
+   101c0:	00c787bb          	addw	a5,a5,a2
+   101c4:	02079713          	slli	a4,a5,0x20
+   101c8:	01e75793          	srli	a5,a4,0x1e
+   101cc:	00f807b3          	add	a5,a6,a5
+   101d0:	00069663          	bnez	a3,101dc <main+0xf4>
+   101d4:	ff0005b7          	lui	a1,0xff000
+   101d8:	0ff58593          	addi	a1,a1,255 # ffffffffff0000ff <__global_pointer$+0xfffffffffefee6e7>
+   101dc:	00b7a023          	sw	a1,0(a5)
+   101e0:	0000070b          	.insn	4, 0x070b
+   101e4:	0007071b          	sext.w	a4,a4
+   101e8:	f8a76ce3          	bltu	a4,a0,10180 <main+0x98>
+   101ec:	f89ff06f          	j	10174 <main+0x8c>

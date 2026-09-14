@@ -1,6 +1,6 @@
 
-./riscv/kernel:     file format elf64-littleriscv
-./riscv/kernel
+/root/arches/project3/results/teapot-350/kernel:     file format elf64-littleriscv
+/root/arches/project3/results/teapot-350/kernel
 architecture: riscv:rv64, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x00000000000100e8
