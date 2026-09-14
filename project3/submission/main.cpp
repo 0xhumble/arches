@@ -8,7 +8,7 @@ int main(void)
     constexpr uint TILE_WIDTH = 4;
     constexpr uint TILE_HEIGHT = 8;
     constexpr uint TILE_SIZE = TILE_WIDTH * TILE_HEIGHT;
-    static_assert(TILE_SIZE == 32, "Match the TRaX scheduler block size");
+    static_assert(TILE_SIZE == 32);
 
     const TRaXKernelArgs args = *(const TRaXKernelArgs*)TRAX_KERNEL_ARGS_ADDRESS;
     // Round UP: partial edge tiles still own a complete block of 32 work IDs.
