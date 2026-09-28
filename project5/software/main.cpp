@@ -21,40 +21,7 @@ inline rtm::vec3 BaryInterp3(
     rtm::vec2 const &bc
 )
 {
-#ifdef __riscv
-    register float src0 asm("f0") = a0.x;
-    register float src1 asm("f1") = a0.y;
-    register float src2 asm("f2") = a0.z;
-    register float src3 asm("f3") = a1.x;
-    register float src4 asm("f4") = a1.y;
-    register float src5 asm("f5") = a1.z;
-    register float src6 asm("f6") = a2.x;
-    register float src7 asm("f7") = a2.y;
-    register float src8 asm("f8") = a2.z;
-    register float src9 asm("f9") = bc.x;
-    register float src10 asm("f10") = bc.y;
-
-    register float dst0 asm("f28");
-    register float dst1 asm("f29");
-    register float dst2 asm("f30");
-
-    asm volatile(
-        ".insn u 0x0b, x0, 0x00018\n\t"
-        : "=f"(dst0), "=f"(dst1), "=f"(dst2)
-        : "f"(src0), "f"(src1), "f"(src2),
-          "f"(src3), "f"(src4), "f"(src5),
-          "f"(src6), "f"(src7), "f"(src8),
-          "f"(src9), "f"(src10)
-    );
-
-    rtm::vec3 a;
-    a.x = dst0;
-    a.y = dst1;
-    a.z = dst2;
-    return a;
-#else
     return a0 * bc.x + a1 * bc.y + a2 * (1.0f - bc.x - bc.y);
-#endif
 }
 
 int main(void)
