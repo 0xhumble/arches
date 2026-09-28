@@ -37,6 +37,8 @@ bool UnitDRAMRamulator::request_port_write_valid(uint port_index)
 
 void UnitDRAMRamulator::write_request(const MemoryRequest& request)
 {
+	if(request.type == MemoryRequest::Type::STORE)
+		++simulator->units_executing;
 	_request_network.write(request, request.port);
 }
 
@@ -127,6 +129,9 @@ bool UnitDRAMRamulator::_store(const MemoryRequest& request, uint channel_index)
 		std::memcpy(&_data_u8[request.paddr], request.data, request.size);
 		log.stores++;
 		log.bytes_written += request.size;
+		// Functional memory is updated on acceptance, not the DRAM callback.
+		// Release the posted store only once its bytes are visible to readback.
+		--simulator->units_executing;
 	}
 
 	return enqueue_success;

@@ -213,6 +213,9 @@ void UnitCache::_send_request()
 		if(!mem_higher->request_port_write_valid(request.port)) continue;
 
 		mem_higher->write_request(request);
+		// Transfer store liveness only AFTER the next unit has accepted it.
+		if(request.type == MemoryRequest::Type::STORE)
+			--simulator->units_executing;
 		slice.mem_higher_request_queue.pop();
 	}
 }
@@ -273,6 +276,10 @@ bool UnitCache::request_port_write_valid(uint port_index)
 
 void UnitCache::write_request(const MemoryRequest& request)
 {
+	// Stores have no return dependency to keep a TP alive. Account for them
+	// throughout the request network, bank pipeline, and forwarding queue.
+	if(request.type == MemoryRequest::Type::STORE)
+		++simulator->units_executing;
 	_request_network.write(request, request.port);
 }
 

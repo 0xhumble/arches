@@ -1,0 +1,23 @@
+{
+  "exit_code": 0,
+  "cycles": 118489,
+  "image_size": [
+    512,
+    512
+  ],
+  "unwritten_pixels_before": 17,
+  "unwritten_pixels_after": 0,
+  "changed_previously_written_pixels": 0,
+  "custom_instruction_dump_sites": 2,
+  "sha256": {
+    "src/arches-v2/main.cpp": "350b958dd2a53cb6316a1398f71b36a9109ea297099002cccf1015c5a9461aee",
+    "src/arches-v2/units/trax/unit-tp.hpp": "0865ea76bbf9562c3acd531b3c73c73bcb2c8a83cd397fc839ac8390d9121f5a",
+    "src/arches-v2/units/unit-tp.cpp": "8371e405f295ce8b985ded5cae7bb727d483d132322a82fe8ea0943349726ed5",
+    "src/arches-v2/units/unit-cache.cpp": "73db56e27ec387ebf7471ee53009acc68c5d00e545d76a282025f83098728f50",
+    "src/arches-v2/units/unit-crossbar.hpp": "60cd66b6e9ae765e2eb99eaba901450433f7dc0616761f136f933707d58b6c1d",
+    "src/arches-v2/units/unit-dram.cpp": "4621c87855272f01cb94e46207224f39200728475251579cdded7a432de91e9f",
+    "src/trax-kernel/main.cpp": "fbb23a1b8555ac5d7cecb73f20bb07a570039c5bf364b4d29f69bb5821794ac5",
+    "src/trax-kernel/riscv/kernel": "29d97545429d0ad8ed2543bba2eea219cbfbd15c9e6311ddfc0cee5bd08550fc",
+    "build/src/arches-v2/arches-v2": "60d1778dc45f3740f367bc4beff854a2428aef426b299017e4a3c16c88be1d58"
+  }
+}

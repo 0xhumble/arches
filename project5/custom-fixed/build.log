@@ -1,0 +1,78 @@
+[  6%] Built target spdlog
+[ 36%] Built target yaml-cpp
+[ 80%] Built target Ramulator
+[ 81%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/main.cpp.o
+[ 81%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-tp.cpp.o
+[ 81%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-cache.cpp.o
+[ 81%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-dram.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache.hpp:5,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-tp.hpp:6,
+                 from /root/arches-project5/src/arches-v2/units/unit-tp.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-dram.hpp:4,
+                 from /root/arches-project5/src/arches-v2/shared-utils.hpp:6,
+                 from /root/arches-project5/src/arches-v2/main.cpp:3:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-dram.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-dram.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+[ 83%] Linking CXX executable arches-v2
+[100%] Built target arches-v2

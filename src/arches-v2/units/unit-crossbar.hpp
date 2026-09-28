@@ -114,6 +114,8 @@ public:
 			_request_regs[i].port = slice;
 
 			_mem_highers[partition]->write_request(_request_regs[i]);
+			if(_request_regs[i].type == MemoryRequest::Type::STORE)
+				--simulator->units_executing;
 			_request_regs[i].paddr = ~0x0ull;
 		}
 
@@ -139,6 +141,9 @@ public:
 
 	void write_request(const MemoryRequest& request) override
 	{
+		// Keep posted stores alive while buffered in this interconnect.
+		if(request.type == MemoryRequest::Type::STORE)
+			++simulator->units_executing;
 		CrossBar<MemoryRequest>::write(request, request.port);
 	}
 

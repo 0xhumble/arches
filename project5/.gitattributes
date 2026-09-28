@@ -1,3 +1,4 @@
 *.log -text -whitespace
 *.dump -text -whitespace
 */trax_log.txt -text -whitespace
+submission/arches/main.cpp -text -whitespace
