@@ -1,0 +1,72 @@
+{
+  "configuration": {
+    "P4_NUM_TMS": 64,
+    "P4_ENABLE_L3": 1,
+    "P4_L3_MIB": 16,
+    "P4_L3_LATENCY": 480
+  },
+  "simulation_command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=sponza",
+    "--framebuffer-width=512",
+    "--framebuffer-height=512",
+    "--pregen-rays=0",
+    "--bvh-preset=0",
+    "--bvh-merging=0",
+    "--logging-interval=100000"
+  ],
+  "git_head": "7daea70d1a50280972433e0f5e4c27d335d81df6",
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "main_sha256": "0451a9ae7c918d39f8efaf6ee5c16fa0900914facf9b76adb47f85fb73555b9f",
+  "simulator_sha256": "6fd09b413f2447603b59458871f4663d92743b2398cfb6a2cc546e55c7d72b4a",
+  "wall_seconds": 183.31146328197792,
+  "returncode": 0,
+  "metrics": {
+    "cycles": 2193053,
+    "frame_ms": 1.4475597359735974,
+    "DRAM_read_bytes": 17987872,
+    "DRAM_write_bytes": 1048576,
+    "RT_rays": 777304,
+    "L1d": {
+      "Total": 54647000,
+      "Hits": 41569386,
+      "Half Misses": 2113419,
+      "Misses": 10964195,
+      "MSHR Stalls": 6632639,
+      "Uncached Requests": 262144,
+      "Hits percent": 76.06892601606675,
+      "Half Misses percent": 3.8674016871923436,
+      "Misses percent": 20.0636722967409
+    },
+    "L2": {
+      "Total": 10964195,
+      "Hits": 4318701,
+      "Half Misses": 40629,
+      "Misses": 6604865,
+      "MSHR Stalls": 54071109,
+      "Uncached Requests": 262144,
+      "Hits percent": 39.38912979931495,
+      "Half Misses percent": 0.37056072060009876,
+      "Misses percent": 60.240309480084946
+    },
+    "L3": {
+      "Total": 6604865,
+      "Hits": 6042208,
+      "Half Misses": 536,
+      "Misses": 562121,
+      "MSHR Stalls": 301,
+      "Uncached Requests": 262144,
+      "Hits percent": 91.48117334722208,
+      "Half Misses percent": 0.00811523021288096,
+      "Misses percent": 8.510711422565034
+    }
+  },
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "image_file_sha256": "9a301b1a690a5fae0de7c5dd89ffb235ffaca2abb5b387d2d9d1f15dec566af1",
+  "image_matches_other_configurations": true
+}

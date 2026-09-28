@@ -1,0 +1,8 @@
+In file included from src/trax-kernel/stbi.cpp:5:
+include/stbi/stb_image.h: In function ‘int stbi__parse_png_file(stbi__png*, int, int)’:
+include/stbi/stb_image.h:4882:56: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 4882 |                   for (k = 0; k < s->img_n; ++k) tc[k] = (stbi_uc)(stbi__get16be(s) & 255) * stbi__depth_scale_table[z->depth]; // non 8-bit images will be larger
+      |                                                  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+include/stbi/stb_image.h:4801:25: note: at offset 3 into destination object ‘tc’ of size 3
+ 4801 |    stbi_uc has_trans=0, tc[3]={0};
+      |                         ^~

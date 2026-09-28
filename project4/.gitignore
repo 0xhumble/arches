@@ -1,0 +1,7 @@
+# Keep the reproducible raw evidence despite repository-wide ignore rules.
+!*.log
+!*_log.txt
+!*.png
+!*.pdf
+__pycache__/
+smoke*/

@@ -1,0 +1,32 @@
+{
+  "all_images_identical": true,
+  "all_pixels_opaque": true,
+  "cpu_reference_pixel_mismatches": 3,
+  "cpu_reference_exact_pixel_match": false,
+  "cpu_reference_pixel_agreement_percent": 99.99885559082031,
+  "cpu_reference_differing_pixels_png_xy": [
+    [
+      319,
+      34
+    ],
+    [
+      319,
+      35
+    ],
+    [
+      24,
+      502
+    ]
+  ],
+  "cpu_reference_ray_count_matches": true,
+  "only_four_configuration_macros_vary": true,
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "repeat_checks": {
+    "l3-16m": {
+      "all_recorded_metrics_identical": true,
+      "original_cycles": 2193053,
+      "repeat_cycles": 2193053,
+      "pixels_identical": true
+    }
+  }
+}

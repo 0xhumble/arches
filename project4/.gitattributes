@@ -1,0 +1,10 @@
+*.png binary
+*.pdf binary
+kernel binary
+# Preserve raw logs byte-for-byte, including CRs and trailing spaces.
+*.log -text -whitespace
+trax_log*.txt -text -whitespace
+# Archived complete simulator sources include unchanged upstream whitespace.
+results/**/main.cpp -text -whitespace
+repeat/**/main.cpp -text -whitespace
+submission/main.cpp -text -whitespace

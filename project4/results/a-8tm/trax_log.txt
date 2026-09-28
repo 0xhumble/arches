@@ -1,0 +1,1783 @@
+Simulation Parameters
+arch-id: 0
+arch-name: TRaX
+bvh-merging: 0
+bvh-preset: 0
+dataset-dir: /root/datasets
+framebuffer-height: 512
+framebuffer-width: 512
+logging-interval: 100000
+max-rays: 128
+pregen-bounce: 1
+pregen-rays: 0
+scene-id: 5
+scene-name: sponza
+
+Project 4: TMs=8, L3=0, L2 latency=160, L3 latency=480
+Project 4: L2 total=4096 KiB, L3 total=0 KiB
+Mesh: Loading: /root/datasets/sponza.obj
+Mesh: Size: 5.4 MiB
+Mesh: Triangles: 262267
+Mesh: Vertices: 208336
+Loading: /root/datasets/sponza.mtlLoading: /root/datasets/textures/5061699253647017043.pngLoaded: /root/datasets/textures/5061699253647017043.png 
+Loading: /root/datasets/textures/5061699253647017043.pngLoaded: /root/datasets/textures/5061699253647017043.png 
+Loading: /root/datasets/textures/7268504077753552595.jpgLoaded: /root/datasets/textures/7268504077753552595.jpg 
+Loading: /root/datasets/textures/7441062115984513793.jpgLoaded: /root/datasets/textures/7441062115984513793.jpg 
+Loading: /root/datasets/textures/11490520546946913238.jpgLoaded: /root/datasets/textures/11490520546946913238.jpg 
+Loading: /root/datasets/textures/6151467286084645207.jpgLoaded: /root/datasets/textures/6151467286084645207.jpg 
+Loading: /root/datasets/textures/4975155472559461469.jpgLoaded: /root/datasets/textures/4975155472559461469.jpg 
+Loading: /root/datasets/textures/4675343432951571524.jpgLoaded: /root/datasets/textures/4675343432951571524.jpg 
+Loading: /root/datasets/textures/2775690330959970771.jpgLoaded: /root/datasets/textures/2775690330959970771.jpg 
+Loading: /root/datasets/textures/2185409758123873465.jpgLoaded: /root/datasets/textures/2185409758123873465.jpg 
+Loading: /root/datasets/textures/17876391417123941155.jpgLoaded: /root/datasets/textures/17876391417123941155.jpg 
+Loading: /root/datasets/textures/11474523244911310074.jpgLoaded: /root/datasets/textures/11474523244911310074.jpg 
+Loading: /root/datasets/textures/9288698199695299068.jpgLoaded: /root/datasets/textures/9288698199695299068.jpg 
+Loading: /root/datasets/textures/16275776544635328252.pngLoaded: /root/datasets/textures/16275776544635328252.png 
+Loading: /root/datasets/textures/16275776544635328252.pngLoaded: /root/datasets/textures/16275776544635328252.png 
+Loading: /root/datasets/textures/755318871556304029.jpgLoaded: /root/datasets/textures/755318871556304029.jpg 
+Loading: /root/datasets/textures/8481240838833932244.jpgLoaded: /root/datasets/textures/8481240838833932244.jpg 
+Loading: /root/datasets/textures/6772804448157695701.jpgLoaded: /root/datasets/textures/6772804448157695701.jpg 
+Loading: /root/datasets/textures/2969916736137545357.jpgLoaded: /root/datasets/textures/2969916736137545357.jpg 
+Loading: /root/datasets/textures/8006627369776289000.pngLoaded: /root/datasets/textures/8006627369776289000.png 
+Loading: /root/datasets/textures/8006627369776289000.pngLoaded: /root/datasets/textures/8006627369776289000.png 
+Loading: /root/datasets/textures/8750083169368950601.jpgLoaded: /root/datasets/textures/8750083169368950601.jpg 
+Loading: /root/datasets/textures/5792855332885324923.jpgLoaded: /root/datasets/textures/5792855332885324923.jpg 
+Loading: /root/datasets/textures/14650633544276105767.jpgLoaded: /root/datasets/textures/14650633544276105767.jpg 
+Loading: /root/datasets/textures/15295713303328085182.jpgLoaded: /root/datasets/textures/15295713303328085182.jpg 
+Loading: /root/datasets/textures/6047387724914829168.jpgLoaded: /root/datasets/textures/6047387724914829168.jpg 
+Loading: /root/datasets/textures/5823059166183034438.jpgLoaded: /root/datasets/textures/5823059166183034438.jpg 
+Loaded: /root/datasets/sponza.mtl 
+BVH2: Loading: /root/datasets/cache/sponza.bvh
+BVH2: Size: 16.0 MiB
+BVH2: SAH Cost: 5565.83
+BVH2: Build Type: SAH
+BVH7: Collapsing Nodes: 53ms
+BVH7: Total Time: 53ms
+BVH7: Size: 7.2 MiB
+BVH7: SAH Cost: 1855.41
+BVH7: Leaf Cost: LINEAR
+BVH7: Collapse: DYNAMIC
+BVH7: Max Clps: 3
+BVH7: Node Merg: 0
+BVH7: Leaf Merg: 0
+BVH7: Max Merg: 1
+BVH7: Node Fullness: 6.33
+02:   0.5% .
+03:   3.0% ...
+04:  10.8% ...........
+05:   4.8% .....
+06:  10.2% ..........
+07:  70.7% .......................................................................
+BVH7: Leaf Fullness: 1.32
+01:  68.5% ....................................................................
+02:  31.3% ...............................
+03:   0.2% 
+NVCWBVH7: Building
+NVCWBVH7: Node Size:     2.3 MiB ( 9.1 B/tri)
+NVCWBVH7: Leaf Size:    24.3 MiB (97.2 B/tri)
+NVCWBVH7: Total Size:   26.6 MiB (106.3 B/tri)
+Starting TRaX
+                            
+Cycle: 100000                 
+Threads Launched: 12640        
+Simulation rate: 39.79 KHz
+                            
+DRAM Read:     58.9 GB/s  (13.15%)
+ L2$ Read:    126.4 B/clk (12.34%)
+L1d$ Read:    512.2 B/clk (12.51%)
+                            
+ L2$ Hit/Half/Miss: 69.0%/0.2%/30.8%
+L1d$ Hit/Half/Miss: 77.8%/2.3%/19.8%
+                            
+ L2$ Stalls: 0.08%
+L1d$ Stalls: 0.16%
+                            
+L2$  Occ: 12.35%
+L1d$ Occ: 15.59%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 445
+
+Rays: 3670
+Nodes: 62383
+Strips: 17011
+Tris: 27003
+Restarts: 0
+
+Nodes/Ray: 17.00
+Strips/Ray: 4.63
+Tris/Ray: 7.36
+Restarts/Ray: 0.00
+
+Issue Cycles: 83062 (41.53%)
+	NODE_FETCH: 62424 (31.21%)
+	TRI_FETCH: 17031 (8.52%)
+	HIT_RETURN: 3606 (1.80%)
+
+Stall Cycles: 116937 (58.47%)
+	NODE_FETCH: 60042 (30.02%)
+	TRI_FETCH: 34396 (17.20%)
+	RAY_FETCH: 13195 (6.60%)
+	NODE_ISECT: 6214 (3.11%)
+	TRI_ISECT: 3073 (1.54%)
+	HIT_RETURN: 16 (0.01%)
+                            
+Cycle: 200000                 
+Threads Launched: 23136        
+Simulation rate: 39.77 KHz
+                            
+DRAM Read:     44.5 GB/s  (9.94%)
+ L2$ Read:    153.9 B/clk (15.03%)
+L1d$ Read:    552.0 B/clk (13.48%)
+                            
+ L2$ Hit/Half/Miss: 80.9%/0.0%/19.1%
+L1d$ Hit/Half/Miss: 74.3%/2.2%/23.5%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.00%
+                            
+L2$  Occ: 15.03%
+L1d$ Occ: 15.95%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 461
+
+Rays: 3806
+Nodes: 70498
+Strips: 17239
+Tris: 27092
+Restarts: 0
+
+Nodes/Ray: 18.52
+Strips/Ray: 4.53
+Tris/Ray: 7.12
+Restarts/Ray: 0.00
+
+Issue Cycles: 91544 (45.77%)
+	NODE_FETCH: 70498 (35.25%)
+	TRI_FETCH: 17239 (8.62%)
+	HIT_RETURN: 3806 (1.90%)
+
+Stall Cycles: 108455 (54.23%)
+	NODE_FETCH: 64132 (32.07%)
+	TRI_FETCH: 33833 (16.92%)
+	NODE_ISECT: 7173 (3.59%)
+	TRI_ISECT: 3295 (1.65%)
+	HIT_RETURN: 21 (0.01%)
+                            
+Cycle: 300000                 
+Threads Launched: 33984        
+Simulation rate: 39.62 KHz
+                            
+DRAM Read:     42.8 GB/s  (9.55%)
+ L2$ Read:    151.2 B/clk (14.77%)
+L1d$ Read:    568.8 B/clk (13.89%)
+                            
+ L2$ Hit/Half/Miss: 81.3%/0.0%/18.7%
+L1d$ Hit/Half/Miss: 75.5%/2.1%/22.4%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.00%
+                            
+L2$  Occ: 14.77%
+L1d$ Occ: 16.49%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 485
+
+Rays: 3998
+Nodes: 72043
+Strips: 18034
+Tris: 28351
+Restarts: 0
+
+Nodes/Ray: 18.02
+Strips/Ray: 4.51
+Tris/Ray: 7.09
+Restarts/Ray: 0.00
+
+Issue Cycles: 94076 (47.04%)
+	NODE_FETCH: 72045 (36.02%)
+	TRI_FETCH: 18032 (9.02%)
+	HIT_RETURN: 3998 (2.00%)
+
+Stall Cycles: 105923 (52.96%)
+	NODE_FETCH: 62389 (31.19%)
+	TRI_FETCH: 32898 (16.45%)
+	NODE_ISECT: 7188 (3.59%)
+	TRI_ISECT: 3426 (1.71%)
+	HIT_RETURN: 21 (0.01%)
+                            
+Cycle: 400000                 
+Threads Launched: 44640        
+Simulation rate: 39.63 KHz
+                            
+DRAM Read:     41.8 GB/s  (9.33%)
+ L2$ Read:    150.6 B/clk (14.71%)
+L1d$ Read:    570.2 B/clk (13.92%)
+                            
+ L2$ Hit/Half/Miss: 81.7%/0.0%/18.3%
+L1d$ Hit/Half/Miss: 75.5%/2.2%/22.3%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.00%
+                            
+L2$  Occ: 14.71%
+L1d$ Occ: 16.49%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 475
+
+Rays: 3919
+Nodes: 72765
+Strips: 17837
+Tris: 27914
+Restarts: 0
+
+Nodes/Ray: 18.56
+Strips/Ray: 4.55
+Tris/Ray: 7.12
+Restarts/Ray: 0.00
+
+Issue Cycles: 94521 (47.26%)
+	NODE_FETCH: 72764 (36.38%)
+	TRI_FETCH: 17838 (8.92%)
+	HIT_RETURN: 3919 (1.96%)
+
+Stall Cycles: 105478 (52.74%)
+	NODE_FETCH: 62141 (31.07%)
+	TRI_FETCH: 32663 (16.33%)
+	NODE_ISECT: 7249 (3.62%)
+	TRI_ISECT: 3406 (1.70%)
+	HIT_RETURN: 17 (0.01%)
+                            
+Cycle: 500000                 
+Threads Launched: 55360        
+Simulation rate: 39.66 KHz
+                            
+DRAM Read:     41.1 GB/s  (9.16%)
+ L2$ Read:    149.4 B/clk (14.59%)
+L1d$ Read:    569.9 B/clk (13.91%)
+                            
+ L2$ Hit/Half/Miss: 81.8%/0.0%/18.1%
+L1d$ Hit/Half/Miss: 75.5%/2.3%/22.1%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 14.59%
+L1d$ Occ: 16.47%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 473
+
+Rays: 3901
+Nodes: 74243
+Strips: 17072
+Tris: 26577
+Restarts: 0
+
+Nodes/Ray: 19.03
+Strips/Ray: 4.38
+Tris/Ray: 6.81
+Restarts/Ray: 0.00
+
+Issue Cycles: 95217 (47.61%)
+	NODE_FETCH: 74241 (37.12%)
+	TRI_FETCH: 17074 (8.54%)
+	HIT_RETURN: 3901 (1.95%)
+
+Stall Cycles: 104782 (52.39%)
+	NODE_FETCH: 62257 (31.13%)
+	TRI_FETCH: 31997 (16.00%)
+	NODE_ISECT: 7301 (3.65%)
+	TRI_ISECT: 3204 (1.60%)
+	HIT_RETURN: 21 (0.01%)
+                            
+Cycle: 600000                 
+Threads Launched: 65632        
+Simulation rate: 39.69 KHz
+                            
+DRAM Read:     42.4 GB/s  (9.46%)
+ L2$ Read:    149.3 B/clk (14.58%)
+L1d$ Read:    565.6 B/clk (13.81%)
+                            
+ L2$ Hit/Half/Miss: 81.2%/0.0%/18.7%
+L1d$ Hit/Half/Miss: 75.3%/2.3%/22.4%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 14.58%
+L1d$ Occ: 16.31%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 461
+
+Rays: 3806
+Nodes: 73218
+Strips: 17195
+Tris: 26724
+Restarts: 0
+
+Nodes/Ray: 19.23
+Strips/Ray: 4.52
+Tris/Ray: 7.02
+Restarts/Ray: 0.00
+
+Issue Cycles: 94222 (47.11%)
+	NODE_FETCH: 73221 (36.61%)
+	TRI_FETCH: 17194 (8.60%)
+	HIT_RETURN: 3806 (1.90%)
+
+Stall Cycles: 105777 (52.89%)
+	NODE_FETCH: 62780 (31.39%)
+	TRI_FETCH: 32447 (16.22%)
+	NODE_ISECT: 7244 (3.62%)
+	TRI_ISECT: 3286 (1.64%)
+	HIT_RETURN: 19 (0.01%)
+                            
+Cycle: 700000                 
+Threads Launched: 76064        
+Simulation rate: 39.65 KHz
+                            
+DRAM Read:     40.9 GB/s  (9.14%)
+ L2$ Read:    147.4 B/clk (14.39%)
+L1d$ Read:    567.9 B/clk (13.86%)
+                            
+ L2$ Hit/Half/Miss: 81.7%/0.0%/18.3%
+L1d$ Hit/Half/Miss: 75.4%/2.7%/21.9%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 14.39%
+L1d$ Occ: 16.40%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 467
+
+Rays: 3851
+Nodes: 75571
+Strips: 16222
+Tris: 24927
+Restarts: 0
+
+Nodes/Ray: 19.62
+Strips/Ray: 4.21
+Tris/Ray: 6.47
+Restarts/Ray: 0.00
+
+Issue Cycles: 95643 (47.82%)
+	NODE_FETCH: 75569 (37.78%)
+	TRI_FETCH: 16222 (8.11%)
+	HIT_RETURN: 3851 (1.93%)
+
+Stall Cycles: 104356 (52.18%)
+	NODE_FETCH: 62415 (31.21%)
+	TRI_FETCH: 31524 (15.76%)
+	NODE_ISECT: 7348 (3.67%)
+	TRI_ISECT: 3047 (1.52%)
+	HIT_RETURN: 21 (0.01%)
+                            
+Cycle: 800000                 
+Threads Launched: 86240        
+Simulation rate: 39.58 KHz
+                            
+DRAM Read:     43.6 GB/s  (9.74%)
+ L2$ Read:    148.7 B/clk (14.52%)
+L1d$ Read:    561.5 B/clk (13.71%)
+                            
+ L2$ Hit/Half/Miss: 80.6%/0.0%/19.4%
+L1d$ Hit/Half/Miss: 75.0%/2.6%/22.4%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 14.52%
+L1d$ Occ: 16.21%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 459
+
+Rays: 3789
+Nodes: 73461
+Strips: 16678
+Tris: 25811
+Restarts: 0
+
+Nodes/Ray: 19.39
+Strips/Ray: 4.40
+Tris/Ray: 6.81
+Restarts/Ray: 0.00
+
+Issue Cycles: 93929 (46.96%)
+	NODE_FETCH: 73463 (36.73%)
+	TRI_FETCH: 16677 (8.34%)
+	HIT_RETURN: 3789 (1.89%)
+
+Stall Cycles: 106070 (53.04%)
+	NODE_FETCH: 63181 (31.59%)
+	TRI_FETCH: 32485 (16.24%)
+	NODE_ISECT: 7234 (3.62%)
+	TRI_ISECT: 3150 (1.58%)
+	HIT_RETURN: 18 (0.01%)
+                            
+Cycle: 900000                 
+Threads Launched: 96768        
+Simulation rate: 39.59 KHz
+                            
+DRAM Read:     44.1 GB/s  (9.84%)
+ L2$ Read:    145.3 B/clk (14.19%)
+L1d$ Read:    572.2 B/clk (13.97%)
+                            
+ L2$ Hit/Half/Miss: 80.0%/0.0%/20.0%
+L1d$ Hit/Half/Miss: 75.8%/2.8%/21.4%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.00%
+                            
+L2$  Occ: 14.19%
+L1d$ Occ: 16.55%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 473
+
+Rays: 3906
+Nodes: 76342
+Strips: 16231
+Tris: 25126
+Restarts: 0
+
+Nodes/Ray: 19.54
+Strips/Ray: 4.16
+Tris/Ray: 6.43
+Restarts/Ray: 0.00
+
+Issue Cycles: 96480 (48.24%)
+	NODE_FETCH: 76343 (38.17%)
+	TRI_FETCH: 16230 (8.12%)
+	HIT_RETURN: 3906 (1.95%)
+
+Stall Cycles: 103519 (51.76%)
+	NODE_FETCH: 61840 (30.92%)
+	TRI_FETCH: 31290 (15.64%)
+	NODE_ISECT: 7366 (3.68%)
+	TRI_ISECT: 3002 (1.50%)
+	HIT_RETURN: 20 (0.01%)
+                            
+Cycle: 1000000                 
+Threads Launched: 106656        
+Simulation rate: 39.59 KHz
+                            
+DRAM Read:     48.9 GB/s  (10.91%)
+ L2$ Read:    147.5 B/clk (14.41%)
+L1d$ Read:    555.0 B/clk (13.55%)
+                            
+ L2$ Hit/Half/Miss: 78.1%/0.0%/21.9%
+L1d$ Hit/Half/Miss: 74.5%/2.9%/22.6%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 14.41%
+L1d$ Occ: 15.98%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 445
+
+Rays: 3667
+Nodes: 74489
+Strips: 15566
+Tris: 23445
+Restarts: 0
+
+Nodes/Ray: 20.31
+Strips/Ray: 4.24
+Tris/Ray: 6.39
+Restarts/Ray: 0.00
+
+Issue Cycles: 93723 (46.86%)
+	NODE_FETCH: 74486 (37.24%)
+	TRI_FETCH: 15569 (7.78%)
+	HIT_RETURN: 3667 (1.83%)
+
+Stall Cycles: 106276 (53.14%)
+	NODE_FETCH: 62883 (31.44%)
+	TRI_FETCH: 33027 (16.51%)
+	NODE_ISECT: 7397 (3.70%)
+	TRI_ISECT: 2946 (1.47%)
+	HIT_RETURN: 21 (0.01%)
+                            
+Cycle: 1100000                 
+Threads Launched: 117184        
+Simulation rate: 39.60 KHz
+                            
+DRAM Read:     42.7 GB/s  (9.53%)
+ L2$ Read:    143.2 B/clk (13.98%)
+L1d$ Read:    578.1 B/clk (14.11%)
+                            
+ L2$ Hit/Half/Miss: 80.3%/0.0%/19.7%
+L1d$ Hit/Half/Miss: 75.9%/3.1%/21.0%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 13.99%
+L1d$ Occ: 16.66%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 463
+
+Rays: 3818
+Nodes: 77366
+Strips: 16316
+Tris: 24246
+Restarts: 0
+
+Nodes/Ray: 20.26
+Strips/Ray: 4.27
+Tris/Ray: 6.35
+Restarts/Ray: 0.00
+
+Issue Cycles: 97501 (48.75%)
+	NODE_FETCH: 77367 (38.68%)
+	TRI_FETCH: 16315 (8.16%)
+	HIT_RETURN: 3818 (1.91%)
+
+Stall Cycles: 102498 (51.25%)
+	NODE_FETCH: 60478 (30.24%)
+	TRI_FETCH: 31660 (15.83%)
+	NODE_ISECT: 7360 (3.68%)
+	TRI_ISECT: 2976 (1.49%)
+	HIT_RETURN: 22 (0.01%)
+                            
+Cycle: 1200000                 
+Threads Launched: 126784        
+Simulation rate: 39.61 KHz
+                            
+DRAM Read:     42.5 GB/s  (9.48%)
+ L2$ Read:    144.7 B/clk (14.13%)
+L1d$ Read:    573.3 B/clk (14.00%)
+                            
+ L2$ Hit/Half/Miss: 80.6%/0.0%/19.3%
+L1d$ Hit/Half/Miss: 75.6%/2.9%/21.4%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.00%
+                            
+L2$  Occ: 14.13%
+L1d$ Occ: 16.51%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 458
+
+Rays: 3780
+Nodes: 78352
+Strips: 15376
+Tris: 23313
+Restarts: 0
+
+Nodes/Ray: 20.73
+Strips/Ray: 4.07
+Tris/Ray: 6.17
+Restarts/Ray: 0.00
+
+Issue Cycles: 97508 (48.75%)
+	NODE_FETCH: 78354 (39.18%)
+	TRI_FETCH: 15373 (7.69%)
+	HIT_RETURN: 3780 (1.89%)
+
+Stall Cycles: 102491 (51.25%)
+	NODE_FETCH: 61104 (30.55%)
+	TRI_FETCH: 31150 (15.58%)
+	NODE_ISECT: 7380 (3.69%)
+	TRI_ISECT: 2834 (1.42%)
+	HIT_RETURN: 22 (0.01%)
+                            
+Cycle: 1300000                 
+Threads Launched: 137632        
+Simulation rate: 39.58 KHz
+                            
+DRAM Read:     41.0 GB/s  (9.15%)
+ L2$ Read:    143.0 B/clk (13.96%)
+L1d$ Read:    582.2 B/clk (14.22%)
+                            
+ L2$ Hit/Half/Miss: 81.0%/0.0%/18.9%
+L1d$ Hit/Half/Miss: 76.2%/3.0%/20.8%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 13.96%
+L1d$ Occ: 16.79%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 470
+
+Rays: 3875
+Nodes: 79671
+Strips: 15548
+Tris: 23662
+Restarts: 0
+
+Nodes/Ray: 20.56
+Strips/Ray: 4.01
+Tris/Ray: 6.11
+Restarts/Ray: 0.00
+
+Issue Cycles: 99096 (49.55%)
+	NODE_FETCH: 79673 (39.84%)
+	TRI_FETCH: 15547 (7.77%)
+	HIT_RETURN: 3875 (1.94%)
+
+Stall Cycles: 100903 (50.45%)
+	NODE_FETCH: 59932 (29.97%)
+	TRI_FETCH: 30692 (15.35%)
+	NODE_ISECT: 7433 (3.72%)
+	TRI_ISECT: 2825 (1.41%)
+	HIT_RETURN: 20 (0.01%)
+                            
+Cycle: 1400000                 
+Threads Launched: 147072        
+Simulation rate: 39.56 KHz
+                            
+DRAM Read:     41.9 GB/s  (9.36%)
+ L2$ Read:    142.9 B/clk (13.95%)
+L1d$ Read:    583.4 B/clk (14.24%)
+                            
+ L2$ Hit/Half/Miss: 80.6%/0.0%/19.4%
+L1d$ Hit/Half/Miss: 76.1%/3.0%/20.9%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 13.95%
+L1d$ Occ: 16.72%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 452
+
+Rays: 3728
+Nodes: 78113
+Strips: 16501
+Tris: 24532
+Restarts: 0
+
+Nodes/Ray: 20.95
+Strips/Ray: 4.43
+Tris/Ray: 6.58
+Restarts/Ray: 0.00
+
+Issue Cycles: 98341 (49.17%)
+	NODE_FETCH: 78109 (39.05%)
+	TRI_FETCH: 16504 (8.25%)
+	HIT_RETURN: 3728 (1.86%)
+
+Stall Cycles: 101658 (50.83%)
+	NODE_FETCH: 59336 (29.67%)
+	TRI_FETCH: 31973 (15.99%)
+	NODE_ISECT: 7358 (3.68%)
+	TRI_ISECT: 2968 (1.48%)
+	HIT_RETURN: 22 (0.01%)
+                            
+Cycle: 1500000                 
+Threads Launched: 158336        
+Simulation rate: 39.56 KHz
+                            
+DRAM Read:     37.0 GB/s  (8.26%)
+ L2$ Read:    134.0 B/clk (13.09%)
+L1d$ Read:    624.0 B/clk (15.23%)
+                            
+ L2$ Hit/Half/Miss: 81.8%/0.0%/18.2%
+L1d$ Hit/Half/Miss: 79.0%/2.8%/18.2%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.02%
+                            
+L2$  Occ: 13.09%
+L1d$ Occ: 17.99%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 500
+
+Rays: 4124
+Nodes: 82559
+Strips: 18085
+Tris: 26805
+Restarts: 0
+
+Nodes/Ray: 20.02
+Strips/Ray: 4.38
+Tris/Ray: 6.50
+Restarts/Ray: 0.00
+
+Issue Cycles: 104771 (52.39%)
+	NODE_FETCH: 82564 (41.28%)
+	TRI_FETCH: 18082 (9.04%)
+	HIT_RETURN: 4124 (2.06%)
+
+Stall Cycles: 95228 (47.61%)
+	NODE_FETCH: 55902 (27.95%)
+	TRI_FETCH: 29027 (14.51%)
+	NODE_ISECT: 7207 (3.60%)
+	TRI_ISECT: 3067 (1.53%)
+	HIT_RETURN: 23 (0.01%)
+                            
+Cycle: 1600000                 
+Threads Launched: 170240        
+Simulation rate: 39.55 KHz
+                            
+DRAM Read:     37.3 GB/s  (8.33%)
+ L2$ Read:    133.7 B/clk (13.05%)
+L1d$ Read:    636.3 B/clk (15.53%)
+                            
+ L2$ Hit/Half/Miss: 81.6%/0.0%/18.4%
+L1d$ Hit/Half/Miss: 79.9%/2.4%/17.7%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 13.05%
+L1d$ Occ: 18.45%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 529
+
+Rays: 4367
+Nodes: 84951
+Strips: 17995
+Tris: 27170
+Restarts: 0
+
+Nodes/Ray: 19.45
+Strips/Ray: 4.12
+Tris/Ray: 6.22
+Restarts/Ray: 0.00
+
+Issue Cycles: 107313 (53.66%)
+	NODE_FETCH: 84949 (42.47%)
+	TRI_FETCH: 17996 (9.00%)
+	HIT_RETURN: 4367 (2.18%)
+
+Stall Cycles: 92686 (46.34%)
+	NODE_FETCH: 54535 (27.27%)
+	TRI_FETCH: 27764 (13.88%)
+	NODE_ISECT: 7351 (3.68%)
+	TRI_ISECT: 3010 (1.51%)
+	HIT_RETURN: 25 (0.01%)
+                            
+Cycle: 1700000                 
+Threads Launched: 181856        
+Simulation rate: 39.54 KHz
+                            
+DRAM Read:     36.5 GB/s  (8.15%)
+ L2$ Read:    132.7 B/clk (12.95%)
+L1d$ Read:    637.3 B/clk (15.56%)
+                            
+ L2$ Hit/Half/Miss: 81.8%/0.0%/18.2%
+L1d$ Hit/Half/Miss: 79.9%/2.6%/17.6%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.00%
+                            
+L2$  Occ: 12.95%
+L1d$ Occ: 18.45%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 526
+
+Rays: 4342
+Nodes: 86403
+Strips: 17377
+Tris: 25988
+Restarts: 0
+
+Nodes/Ray: 19.90
+Strips/Ray: 4.00
+Tris/Ray: 5.98
+Restarts/Ray: 0.00
+
+Issue Cycles: 108124 (54.06%)
+	NODE_FETCH: 86405 (43.20%)
+	TRI_FETCH: 17376 (8.69%)
+	HIT_RETURN: 4342 (2.17%)
+
+Stall Cycles: 91875 (45.94%)
+	NODE_FETCH: 54209 (27.10%)
+	TRI_FETCH: 27367 (13.68%)
+	NODE_ISECT: 7371 (3.69%)
+	TRI_ISECT: 2907 (1.45%)
+	HIT_RETURN: 20 (0.01%)
+                            
+Cycle: 1800000                 
+Threads Launched: 192896        
+Simulation rate: 39.55 KHz
+                            
+DRAM Read:     36.4 GB/s  (8.13%)
+ L2$ Read:    133.8 B/clk (13.06%)
+L1d$ Read:    632.2 B/clk (15.43%)
+                            
+ L2$ Hit/Half/Miss: 82.0%/0.0%/18.0%
+L1d$ Hit/Half/Miss: 79.4%/2.7%/17.9%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.02%
+                            
+L2$  Occ: 13.06%
+L1d$ Occ: 18.21%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 505
+
+Rays: 4165
+Nodes: 84386
+Strips: 17959
+Tris: 27232
+Restarts: 0
+
+Nodes/Ray: 20.26
+Strips/Ray: 4.31
+Tris/Ray: 6.54
+Restarts/Ray: 0.00
+
+Issue Cycles: 106512 (53.26%)
+	NODE_FETCH: 84386 (42.19%)
+	TRI_FETCH: 17959 (8.98%)
+	HIT_RETURN: 4165 (2.08%)
+
+Stall Cycles: 93488 (46.74%)
+	NODE_FETCH: 54442 (27.22%)
+	TRI_FETCH: 28697 (14.35%)
+	NODE_ISECT: 7292 (3.65%)
+	TRI_ISECT: 3036 (1.52%)
+	HIT_RETURN: 19 (0.01%)
+                            
+Cycle: 1900000                 
+Threads Launched: 203648        
+Simulation rate: 39.56 KHz
+                            
+DRAM Read:     35.5 GB/s  (7.93%)
+ L2$ Read:    131.5 B/clk (12.84%)
+L1d$ Read:    635.7 B/clk (15.52%)
+                            
+ L2$ Hit/Half/Miss: 82.1%/0.0%/17.8%
+L1d$ Hit/Half/Miss: 79.7%/2.7%/17.6%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.02%
+                            
+L2$  Occ: 12.84%
+L1d$ Occ: 18.26%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 499
+
+Rays: 4121
+Nodes: 86415
+Strips: 17306
+Tris: 26154
+Restarts: 0
+
+Nodes/Ray: 20.97
+Strips/Ray: 4.20
+Tris/Ray: 6.35
+Restarts/Ray: 0.00
+
+Issue Cycles: 107843 (53.92%)
+	NODE_FETCH: 86414 (43.21%)
+	TRI_FETCH: 17307 (8.65%)
+	HIT_RETURN: 4121 (2.06%)
+
+Stall Cycles: 92156 (46.08%)
+	NODE_FETCH: 54314 (27.16%)
+	TRI_FETCH: 27624 (13.81%)
+	NODE_ISECT: 7299 (3.65%)
+	TRI_ISECT: 2895 (1.45%)
+	HIT_RETURN: 24 (0.01%)
+                            
+Cycle: 2000000                 
+Threads Launched: 214784        
+Simulation rate: 39.55 KHz
+                            
+DRAM Read:     34.4 GB/s  (7.68%)
+ L2$ Read:    132.6 B/clk (12.95%)
+L1d$ Read:    627.0 B/clk (15.31%)
+                            
+ L2$ Hit/Half/Miss: 82.9%/0.0%/17.1%
+L1d$ Hit/Half/Miss: 79.1%/2.9%/18.0%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.03%
+                            
+L2$  Occ: 12.94%
+L1d$ Occ: 17.93%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 479
+
+Rays: 3949
+Nodes: 84260
+Strips: 17599
+Tris: 26633
+Restarts: 0
+
+Nodes/Ray: 21.34
+Strips/Ray: 4.46
+Tris/Ray: 6.74
+Restarts/Ray: 0.00
+
+Issue Cycles: 105808 (52.90%)
+	NODE_FETCH: 84262 (42.13%)
+	TRI_FETCH: 17597 (8.80%)
+	HIT_RETURN: 3949 (1.97%)
+
+Stall Cycles: 94191 (47.10%)
+	NODE_FETCH: 55131 (27.57%)
+	TRI_FETCH: 28757 (14.38%)
+	NODE_ISECT: 7302 (3.65%)
+	TRI_ISECT: 2978 (1.49%)
+	HIT_RETURN: 21 (0.01%)
+                            
+Cycle: 2100000                 
+Threads Launched: 224832        
+Simulation rate: 39.55 KHz
+                            
+DRAM Read:     36.6 GB/s  (8.17%)
+ L2$ Read:    135.0 B/clk (13.18%)
+L1d$ Read:    619.4 B/clk (15.12%)
+                            
+ L2$ Hit/Half/Miss: 82.1%/0.0%/17.9%
+L1d$ Hit/Half/Miss: 78.7%/2.7%/18.6%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.01%
+                            
+L2$  Occ: 13.18%
+L1d$ Occ: 17.70%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 473
+
+Rays: 3901
+Nodes: 83367
+Strips: 17338
+Tris: 26717
+Restarts: 0
+
+Nodes/Ray: 21.37
+Strips/Ray: 4.44
+Tris/Ray: 6.85
+Restarts/Ray: 0.00
+
+Issue Cycles: 104607 (52.30%)
+	NODE_FETCH: 83364 (41.68%)
+	TRI_FETCH: 17340 (8.67%)
+	HIT_RETURN: 3901 (1.95%)
+
+Stall Cycles: 95393 (47.70%)
+	NODE_FETCH: 55952 (27.98%)
+	TRI_FETCH: 29045 (14.52%)
+	NODE_ISECT: 7374 (3.69%)
+	TRI_ISECT: 3000 (1.50%)
+	HIT_RETURN: 20 (0.01%)
+                            
+Cycle: 2200000                 
+Threads Launched: 235936        
+Simulation rate: 39.55 KHz
+                            
+DRAM Read:     35.3 GB/s  (7.89%)
+ L2$ Read:    134.1 B/clk (13.10%)
+L1d$ Read:    620.7 B/clk (15.15%)
+                            
+ L2$ Hit/Half/Miss: 82.6%/0.0%/17.4%
+L1d$ Hit/Half/Miss: 78.9%/2.7%/18.4%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.02%
+                            
+L2$  Occ: 13.10%
+L1d$ Occ: 17.79%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 486
+
+Rays: 4013
+Nodes: 83734
+Strips: 17240
+Tris: 26554
+Restarts: 0
+
+Nodes/Ray: 20.87
+Strips/Ray: 4.30
+Tris/Ray: 6.62
+Restarts/Ray: 0.00
+
+Issue Cycles: 104991 (52.50%)
+	NODE_FETCH: 83736 (41.87%)
+	TRI_FETCH: 17242 (8.62%)
+	HIT_RETURN: 4013 (2.01%)
+
+Stall Cycles: 95008 (47.50%)
+	NODE_FETCH: 55951 (27.98%)
+	TRI_FETCH: 28704 (14.35%)
+	NODE_ISECT: 7370 (3.69%)
+	TRI_ISECT: 2958 (1.48%)
+	HIT_RETURN: 24 (0.01%)
+                            
+Cycle: 2300000                 
+Threads Launched: 247008        
+Simulation rate: 39.56 KHz
+                            
+DRAM Read:     35.0 GB/s  (7.81%)
+ L2$ Read:    133.0 B/clk (12.99%)
+L1d$ Read:    626.8 B/clk (15.30%)
+                            
+ L2$ Hit/Half/Miss: 82.6%/0.0%/17.3%
+L1d$ Hit/Half/Miss: 79.4%/2.6%/18.1%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.02%
+                            
+L2$  Occ: 12.98%
+L1d$ Occ: 17.96%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 491
+
+Rays: 4047
+Nodes: 85706
+Strips: 16841
+Tris: 25874
+Restarts: 0
+
+Nodes/Ray: 21.17
+Strips/Ray: 4.16
+Tris/Ray: 6.39
+Restarts/Ray: 0.00
+
+Issue Cycles: 106593 (53.30%)
+	NODE_FETCH: 85704 (42.85%)
+	TRI_FETCH: 16841 (8.42%)
+	HIT_RETURN: 4047 (2.02%)
+
+Stall Cycles: 93406 (46.70%)
+	NODE_FETCH: 55423 (27.71%)
+	TRI_FETCH: 27627 (13.81%)
+	NODE_ISECT: 7469 (3.73%)
+	TRI_ISECT: 2867 (1.43%)
+	HIT_RETURN: 19 (0.01%)
+                            
+Cycle: 2400000                 
+Threads Launched: 257856        
+Simulation rate: 39.55 KHz
+                            
+DRAM Read:     33.9 GB/s  (7.56%)
+ L2$ Read:    126.9 B/clk (12.39%)
+L1d$ Read:    646.8 B/clk (15.79%)
+                            
+ L2$ Hit/Half/Miss: 82.4%/0.0%/17.6%
+L1d$ Hit/Half/Miss: 80.7%/2.6%/16.7%
+                            
+ L2$ Stalls: 0.00%
+L1d$ Stalls: 0.03%
+                            
+L2$  Occ: 12.39%
+L1d$ Occ: 18.52%
+                            
+Texels: 0
+Loads: 0
+MRays/s: 510
+
+Rays: 4207
+Nodes: 86287
+Strips: 18459
+Tris: 28581
+Restarts: 0
+
+Nodes/Ray: 20.51
+Strips/Ray: 4.39
+Tris/Ray: 6.79
+Restarts/Ray: 0.00
+
+Issue Cycles: 108955 (54.48%)
+	NODE_FETCH: 86293 (43.15%)
+	TRI_FETCH: 18455 (9.23%)
+	HIT_RETURN: 4207 (2.10%)
+
+Stall Cycles: 91044 (45.52%)
+	NODE_FETCH: 53597 (26.80%)
+	TRI_FETCH: 27162 (13.58%)
+	NODE_ISECT: 7178 (3.59%)
+	TRI_ISECT: 3083 (1.54%)
+	HIT_RETURN: 23 (0.01%)
+PROFILING DISABLED!
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 241936
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.289444208
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 108.11129
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 114135
+    write_row_conflicts_rate: 0.0401611328
+    write_row_misses_rate: 0.00592041016
+    write_row_hits_rate: 0.923278809
+    read_queue_len_avg_0: 2.01926708
+    read_row_conflicts_rate: 0.183195338
+    read_row_misses_rate: 0.0549524687
+    write_queue_len_avg_0: 0.247007862
+    read_row_hits_rate: 0.761852205
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 110.699562
+    write_queue_len_avg_1: 0.263189346
+    read_queue_len_avg_1: 2.31767893
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.0474243164
+    write_row_misses_rate: 0.00604248047
+    num_other_reqs_1: 0
+    num_read_reqs_1: 127801
+    write_row_hits_rate: 0.915100098
+    read_row_conflicts_rate: 0.189568162
+    read_row_misses_rate: 0.0500935055
+    read_row_hits_rate: 0.760338366
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 249502
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.291281253
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 112.545532
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 125540
+    write_row_conflicts_rate: 0.0457763672
+    write_row_misses_rate: 0.005859375
+    write_row_hits_rate: 0.916625977
+    read_queue_len_avg_0: 2.3122642
+    read_row_conflicts_rate: 0.196837664
+    read_row_misses_rate: 0.0508762151
+    write_queue_len_avg_0: 0.263154536
+    read_row_hits_rate: 0.752286136
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 111.104774
+    write_queue_len_avg_1: 0.246045455
+    read_queue_len_avg_1: 2.25978255
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.0452270508
+    write_row_misses_rate: 0.00628662109
+    num_other_reqs_1: 0
+    num_read_reqs_1: 123962
+    write_row_hits_rate: 0.918762207
+    read_row_conflicts_rate: 0.183451384
+    read_row_misses_rate: 0.0513141118
+    read_row_hits_rate: 0.76523453
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 256301
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.292684942
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 113.60955
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 134308
+    write_row_conflicts_rate: 0.048034668
+    write_row_misses_rate: 0.00555419922
+    write_row_hits_rate: 0.909484863
+    read_queue_len_avg_0: 2.50185847
+    read_row_conflicts_rate: 0.194820866
+    read_row_misses_rate: 0.0476367734
+    write_queue_len_avg_0: 0.318379045
+    read_row_hits_rate: 0.757542372
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 107.620903
+    write_queue_len_avg_1: 0.243277162
+    read_queue_len_avg_1: 2.1495049
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.0439453125
+    write_row_misses_rate: 0.00579833984
+    num_other_reqs_1: 0
+    num_read_reqs_1: 121993
+    write_row_hits_rate: 0.92010498
+    read_row_conflicts_rate: 0.183789238
+    read_row_misses_rate: 0.0516505055
+    read_row_hits_rate: 0.764560282
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 281673
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.298667014
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 116.74794
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 148776
+    write_row_conflicts_rate: 0.0510864258
+    write_row_misses_rate: 0.00537109375
+    write_row_hits_rate: 0.901428223
+    read_queue_len_avg_0: 2.85105443
+    read_row_conflicts_rate: 0.201524436
+    read_row_misses_rate: 0.043212615
+    write_queue_len_avg_0: 0.389374167
+    read_row_hits_rate: 0.755262971
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 113.110306
+    write_queue_len_avg_1: 0.273526967
+    read_queue_len_avg_1: 2.46333075
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.0459594727
+    write_row_misses_rate: 0.00579833984
+    num_other_reqs_1: 0
+    num_read_reqs_1: 132897
+    write_row_hits_rate: 0.914123535
+    read_row_conflicts_rate: 0.196031511
+    read_row_misses_rate: 0.0477587916
+    read_row_hits_rate: 0.756209671
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 263567
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.294288099
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 111.683548
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 135818
+    write_row_conflicts_rate: 0.0523681641
+    write_row_misses_rate: 0.00549316406
+    write_row_hits_rate: 0.90447998
+    read_queue_len_avg_0: 2.48817968
+    read_row_conflicts_rate: 0.1898202
+    read_row_misses_rate: 0.0469746292
+    write_queue_len_avg_0: 0.322287321
+    read_row_hits_rate: 0.763205171
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 110.981918
+    write_queue_len_avg_1: 0.251691729
+    read_queue_len_avg_1: 2.32299542
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.0462646484
+    write_row_misses_rate: 0.00616455078
+    num_other_reqs_1: 0
+    num_read_reqs_1: 127749
+    write_row_hits_rate: 0.918579102
+    read_row_conflicts_rate: 0.190365478
+    read_row_misses_rate: 0.0494407006
+    read_row_hits_rate: 0.760193825
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 244572
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.28995648
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 112.328377
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 127822
+    write_row_conflicts_rate: 0.0521240234
+    write_row_misses_rate: 0.00549316406
+    write_row_hits_rate: 0.907409668
+    read_queue_len_avg_0: 2.35417318
+    read_row_conflicts_rate: 0.190288052
+    read_row_misses_rate: 0.0494906977
+    write_queue_len_avg_0: 0.293103486
+    read_row_hits_rate: 0.760221243
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 106.91626
+    write_queue_len_avg_1: 0.231890798
+    read_queue_len_avg_1: 2.04377866
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.043762207
+    write_row_misses_rate: 0.00592041016
+    num_other_reqs_1: 0
+    num_read_reqs_1: 116750
+    write_row_hits_rate: 0.923583984
+    read_row_conflicts_rate: 0.179665953
+    read_row_misses_rate: 0.0539700203
+    read_row_hits_rate: 0.766364038
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 271547
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.296552271
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 113.469376
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 140254
+    write_row_conflicts_rate: 0.0504760742
+    write_row_misses_rate: 0.00567626953
+    write_row_hits_rate: 0.907958984
+    read_queue_len_avg_0: 2.60709977
+    read_row_conflicts_rate: 0.199980035
+    read_row_misses_rate: 0.0456101075
+    write_queue_len_avg_0: 0.300035477
+    read_row_hits_rate: 0.75440985
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 112.141899
+    write_queue_len_avg_1: 0.26971218
+    read_queue_len_avg_1: 2.40848613
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.0486450195
+    write_row_misses_rate: 0.00512695312
+    num_other_reqs_1: 0
+    num_read_reqs_1: 131293
+    write_row_hits_rate: 0.910827637
+    read_row_conflicts_rate: 0.19974409
+    read_row_misses_rate: 0.0488221012
+    read_row_hits_rate: 0.75143379
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+Frontend:
+  impl: GEM5
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 32768
+  total_num_read_requests: 247249
+  memory_system_cycles: 5743971
+
+  DRAM:
+    impl: GDDR6A
+    total_power(W): 0.290790588
+  AddrMapper:
+    impl: RoBgBaRaChCo
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 0
+    avg_read_latency_0: 114.149353
+    num_other_reqs_0: 0
+    num_write_reqs_0: 16384
+    num_read_reqs_0: 134628
+    write_row_conflicts_rate: 0.0461425781
+    write_row_misses_rate: 0.00579833984
+    write_row_hits_rate: 0.910827637
+    read_queue_len_avg_0: 2.51909184
+    read_row_conflicts_rate: 0.19702439
+    read_row_misses_rate: 0.0476052538
+    write_queue_len_avg_0: 0.302553236
+    read_row_hits_rate: 0.755370378
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+  Controller:
+    impl: GenericA
+    id: Channel 1
+    avg_read_latency_1: 109.792053
+    write_queue_len_avg_1: 0.23981075
+    read_queue_len_avg_1: 2.02486396
+    num_write_reqs_1: 16384
+    write_row_conflicts_rate: 0.04296875
+    write_row_misses_rate: 0.00628662109
+    num_other_reqs_1: 0
+    num_read_reqs_1: 112621
+    write_row_hits_rate: 0.919494629
+    read_row_conflicts_rate: 0.183793426
+    read_row_misses_rate: 0.0555846617
+    read_row_hits_rate: 0.760621905
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    RowPolicy:
+      impl: OpenRowPolicy
+
+
+
+
+--------------------------------------DRAM--------------------------------------
+DRAM Read: 40.1 GB/s (8.95%)
+Total: 2318491
+Loads: 2056347
+Stores: 262144
+
+Unique Loads: 539071
+Unique Rows: 3773
+Unique Loads/Row: 142
+
+--------------------------------------L2$---------------------------------------
+ L2$ Read: 138.9 B/clk (13.56%)
+Total: 10789343
+Hits: 8729315 (80.91%)
+Half Misses: 3681 (0.03%)
+Misses: 2056347 (19.06%)
+
+Uncached Requests: 262144
+
+MSHR Stalls: 2653
+
+Tag Array Access: 10789343
+Data Array Reads: 8729315
+Data Array Writes: 0
+
+Total Energy: 0.00 mJ
+Total Power: 0.00 W
+
+--------------------------------------L1d$--------------------------------------
+L1d$ Read: 586.9 B/clk (14.33%)
+Total: 53901528
+Hits: 41692706 (77.35%)
+Half Misses: 1419479 (2.63%)
+Misses: 10789343 (20.02%)
+
+Uncached Requests: 262144
+
+MSHR Stalls: 57258
+
+Tag Array Access: 53901528
+Data Array Reads: 41692706
+Data Array Writes: 0
+
+Total Energy: 0.00 mJ
+Total Power: 0.00 W
+
+----------------------------------Texture Unit----------------------------------
+Texels: 0
+Loads: 0
+
+---------------------------------------TP---------------------------------------
+Issue Cycles: 266987 (10.87%)
+	FMUL: 67734 (2.76%)
+	FADD: 63438 (2.58%)
+	ILOGICAL: 33155 (1.35%)
+	IADD: 23308 (0.95%)
+	LOAD: 22244 (0.91%)
+	FDIV: 13353 (0.54%)
+	MOVE: 8945 (0.36%)
+	BRANCH: 8925 (0.36%)
+	FCMP: 6921 (0.28%)
+	FSQRT: 5934 (0.24%)
+	IMUL: 4291 (0.17%)
+	FSIGN: 3175 (0.13%)
+	CONVERT: 1536 (0.06%)
+	TRACERAY: 1518 (0.06%)
+	IDIV: 1024 (0.04%)
+	STORE: 704 (0.03%)
+	FCHTHRD: 520 (0.02%)
+	JUMP: 257 (0.01%)
+
+Data Stall Cycles: 2183827 (88.93%)
+	TRACERAY: 2109400 (85.90%)
+	LOAD: 68064 (2.77%)
+	FDIV: 3378 (0.14%)
+	FSQRT: 2853 (0.12%)
+	FCHTHRD: 128 (0.01%)
+	IMUL: 2 (0.00%)
+
+Pipeline Stall Cycles: 4801 (0.20%)
+	LOAD: 4781 (0.19%)
+	FDIV: 19 (0.00%)
+	FSQRT: 1 (0.00%)
+
+------------------------------------RT Core-------------------------------------
+Rays: 97163
+Nodes: 1936432
+Strips: 419819
+Tris: 643279
+Restarts: 0
+
+Nodes/Ray: 19.93
+Strips/Ray: 4.32
+Tris/Ray: 6.62
+Restarts/Ray: 0.00
+
+Issue Cycles: 2453415 (49.34%)
+	NODE_FETCH: 1936432 (38.94%)
+	TRI_FETCH: 419819 (8.44%)
+	HIT_RETURN: 97163 (1.95%)
+
+Stall Cycles: 2519222 (50.66%)
+	NODE_FETCH: 1448974 (29.14%)
+	TRI_FETCH: 752072 (15.12%)
+	NODE_ISECT: 178816 (3.60%)
+	TRI_ISECT: 75148 (1.51%)
+	RAY_FETCH: 63689 (1.28%)
+	HIT_RETURN: 521 (0.01%)
+
+------------------------------Performance Summary-------------------------------
+Cycles: 2486319
+Project4 counters: DRAM_read_bytes=65803104 DRAM_write_bytes=1048576 RT_rays=777304
+Clock rate: 1515 MHz
+Frame time: 1.64 ms
+MRays/s: 474
+
+---------------------------------Power Summary----------------------------------
+Energy: 0.00 mJ
+Power: 0.00 W
+MRays/J: inf
+
+-------------------------------Simulation Summary-------------------------------
+Simulation rate: 39.69 KHz
+Simulation time: 63 s
+MSIPS: 20.32

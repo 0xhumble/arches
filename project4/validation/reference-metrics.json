@@ -1,0 +1,9 @@
+{
+  "rays": 777304,
+  "escaped_paths": 17658,
+  "triangles": 262267,
+  "bvh_node_bytes": 2389440,
+  "primitive_block_bytes": 25481856,
+  "normal_index_bytes": 3147204,
+  "normal_bytes": 862020
+}

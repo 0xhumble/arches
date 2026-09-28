@@ -1,0 +1,61 @@
+{
+  "configuration": {
+    "P4_NUM_TMS": 64,
+    "P4_ENABLE_L3": 0,
+    "P4_L3_MIB": 4,
+    "P4_L3_LATENCY": 480
+  },
+  "simulation_command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=sponza",
+    "--framebuffer-width=512",
+    "--framebuffer-height=512",
+    "--pregen-rays=0",
+    "--bvh-preset=0",
+    "--bvh-merging=0",
+    "--logging-interval=100000"
+  ],
+  "git_head": "7daea70d1a50280972433e0f5e4c27d335d81df6",
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "main_sha256": "5ca9e20d4c273ec8266854574d4fcf6f16f6102683cd340f4005650252b5bcd6",
+  "simulator_sha256": "d519b5cf6e7ad68f8341c0718003d25004ceab6cd0a94428ec454c3202c6059b",
+  "wall_seconds": 59.96152509911917,
+  "returncode": 0,
+  "metrics": {
+    "cycles": 521272,
+    "frame_ms": 0.3440739273927393,
+    "DRAM_read_bytes": 67544032,
+    "DRAM_write_bytes": 1048576,
+    "RT_rays": 777304,
+    "L1d": {
+      "Total": 54647000,
+      "Hits": 42071717,
+      "Half Misses": 1641711,
+      "Misses": 10933572,
+      "MSHR Stalls": 416606,
+      "Uncached Requests": 262144,
+      "Hits percent": 76.98815488498911,
+      "Half Misses percent": 3.004210661152488,
+      "Misses percent": 20.0076344538584
+    },
+    "L2": {
+      "Total": 10933572,
+      "Hits": 8777675,
+      "Half Misses": 45146,
+      "Misses": 2110751,
+      "MSHR Stalls": 200115,
+      "Uncached Requests": 262144,
+      "Hits percent": 80.2818603106103,
+      "Half Misses percent": 0.41291171814664046,
+      "Misses percent": 19.305227971243067
+    }
+  },
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "image_file_sha256": "9a301b1a690a5fae0de7c5dd89ffb235ffaca2abb5b387d2d9d1f15dec566af1",
+  "image_matches_other_configurations": true
+}

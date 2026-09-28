@@ -1,0 +1,72 @@
+{
+  "configuration": {
+    "P4_NUM_TMS": 64,
+    "P4_ENABLE_L3": 1,
+    "P4_L3_MIB": 16,
+    "P4_L3_LATENCY": 576
+  },
+  "simulation_command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=sponza",
+    "--framebuffer-width=512",
+    "--framebuffer-height=512",
+    "--pregen-rays=0",
+    "--bvh-preset=0",
+    "--bvh-merging=0",
+    "--logging-interval=100000"
+  ],
+  "git_head": "7daea70d1a50280972433e0f5e4c27d335d81df6",
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "main_sha256": "05929c8702d24b39e5dbc962c68c3a6af24d93bd40a86a16752cbe807f9e6fcb",
+  "simulator_sha256": "1415f4060e907b6c722cb51f62f9e7b81bf61bcb90bbac833e75f8682e89a708",
+  "wall_seconds": 216.2210426130332,
+  "returncode": 0,
+  "metrics": {
+    "cycles": 2604158,
+    "frame_ms": 1.7189161716171617,
+    "DRAM_read_bytes": 17986400,
+    "DRAM_write_bytes": 1048576,
+    "RT_rays": 777304,
+    "L1d": {
+      "Total": 54647000,
+      "Hits": 41539862,
+      "Half Misses": 2141285,
+      "Misses": 10965853,
+      "MSHR Stalls": 8427722,
+      "Uncached Requests": 262144,
+      "Hits percent": 76.01489926253957,
+      "Half Misses percent": 3.9183944223836624,
+      "Misses percent": 20.066706315076765
+    },
+    "L2": {
+      "Total": 10965853,
+      "Hits": 4323078,
+      "Half Misses": 40680,
+      "Misses": 6602095,
+      "MSHR Stalls": 66855502,
+      "Uncached Requests": 262144,
+      "Hits percent": 39.42308911126202,
+      "Half Misses percent": 0.37096977316766877,
+      "Misses percent": 60.205941115570305
+    },
+    "L3": {
+      "Total": 6602095,
+      "Hits": 6039445,
+      "Half Misses": 575,
+      "Misses": 562075,
+      "MSHR Stalls": 523,
+      "Uncached Requests": 262144,
+      "Hits percent": 91.47770518297601,
+      "Half Misses percent": 0.008709356651184207,
+      "Misses percent": 8.513585460372806
+    }
+  },
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "image_file_sha256": "9a301b1a690a5fae0de7c5dd89ffb235ffaca2abb5b387d2d9d1f15dec566af1",
+  "image_matches_other_configurations": true
+}

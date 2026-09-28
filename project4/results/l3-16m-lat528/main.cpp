@@ -11,7 +11,7 @@
 #define P4_NUM_TMS 64
 #define P4_ENABLE_L3 1
 #define P4_L3_MIB 16
-#define P4_L3_LATENCY 480
+#define P4_L3_LATENCY 528
 
 namespace Arches {
 

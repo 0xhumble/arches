@@ -1,0 +1,72 @@
+{
+  "configuration": {
+    "P4_NUM_TMS": 64,
+    "P4_ENABLE_L3": 1,
+    "P4_L3_MIB": 4,
+    "P4_L3_LATENCY": 480
+  },
+  "simulation_command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=sponza",
+    "--framebuffer-width=512",
+    "--framebuffer-height=512",
+    "--pregen-rays=0",
+    "--bvh-preset=0",
+    "--bvh-merging=0",
+    "--logging-interval=100000"
+  ],
+  "git_head": "7daea70d1a50280972433e0f5e4c27d335d81df6",
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "main_sha256": "eeab8f2943630b5e87e92591afa13e0fbd33b9f32b20bfc19591027be8671c6f",
+  "simulator_sha256": "dbf1f552a41268995bb5535c2e0d3910eb0a97dc010085c6e3326d0b8916a6b9",
+  "wall_seconds": 196.24596528802067,
+  "returncode": 0,
+  "metrics": {
+    "cycles": 2302386,
+    "frame_ms": 1.5197267326732673,
+    "DRAM_read_bytes": 68302944,
+    "DRAM_write_bytes": 1048576,
+    "RT_rays": 777304,
+    "L1d": {
+      "Total": 54647000,
+      "Hits": 41567563,
+      "Half Misses": 2114269,
+      "Misses": 10965168,
+      "MSHR Stalls": 6822607,
+      "Uncached Requests": 262144,
+      "Hits percent": 76.0655900598386,
+      "Half Misses percent": 3.868957124819295,
+      "Misses percent": 20.065452815342105
+    },
+    "L2": {
+      "Total": 10965168,
+      "Hits": 4327826,
+      "Half Misses": 39648,
+      "Misses": 6597694,
+      "MSHR Stalls": 57419578,
+      "Uncached Requests": 262144,
+      "Hits percent": 39.4688526432062,
+      "Half Misses percent": 0.3615813273449162,
+      "Misses percent": 60.16956602944889
+    },
+    "L3": {
+      "Total": 6597694,
+      "Hits": 4461310,
+      "Half Misses": 1917,
+      "Misses": 2134467,
+      "MSHR Stalls": 301,
+      "Uncached Requests": 262144,
+      "Hits percent": 67.61923181038708,
+      "Half Misses percent": 0.029055606398235505,
+      "Misses percent": 32.35171258321468
+    }
+  },
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "image_file_sha256": "9a301b1a690a5fae0de7c5dd89ffb235ffaca2abb5b387d2d9d1f15dec566af1",
+  "image_matches_other_configurations": true
+}
