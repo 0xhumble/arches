@@ -8,7 +8,7 @@ The first stage (`results/`, `summary.*`, `findings.md`) covers the prescribed A
 - The Project 3 store-drain and halted-thread correctness fixes are retained.
 - The experimental simulator is `src/arches-v2/main.cpp`. Five `P4_*` constants now select the configuration (the fifth, `P4_L2_MSHRS`, was added for stage two); each run archives its complete `main.cpp`. Old case names explicitly retain 192 local-L2 MSHRs.
 - Start with [findings.md](findings.md) for the Chinese interpretation. `summary.md`, `summary.csv`, and `summary.json` contain measured results; `results/` contains unedited simulator logs, images, build logs and provenance.
-- `submission/` contains the four required raw logs and the current best **three-level** simulator `main.cpp` (16 MiB L3, 480 cycles, 768 MSHRs/local L2). A/B/C logs are unchanged; `my_best` now refers to stage two. The original two-level B remains faster overall. This is a staged result package, not the final PDF report.
+- **Final user-selected optimization:** start from prescribed C (4 MiB L3, 480 cycles) and change only local-L2 MSHRs from 192 to 384. See [selected/README.md](selected/README.md). `submission/main.cpp` and the required filename `trax_log_my_best.txt` refer to this selected configuration, not the fastest exploratory configuration. A/B/C logs are unchanged. Capacity/latency and 16 MiB MSHR studies remain exploratory evidence, not the final proposal. The PDF report is not yet prepared.
 
 ## Controlled workload
 
@@ -62,6 +62,10 @@ uv run --with pillow python project4/run.py --results /tmp/project4-mshr \
   --cases l2-mshr192 l2-mshr384 l2-mshr768
 # Validate archived stage-two results and generate its separate summaries:
 uv run --with pillow python project4/mshr/analyze.py
+
+# Final selected optimization: C's 4 MiB L3, only local-L2 MSHRs change to 384.
+uv run --with pillow python project4/run.py --results /tmp/project4-selected --cases c-mshr384
+uv run --with pillow python project4/selected/validate.py
 ```
 
 `run.py` refuses to overwrite existing case directories. Compilation and simulation are serial because Arches loads one fixed ELF path. On exit the script restores the original simulator source template; the last executable still corresponds to the last case, so rebuild before manually invoking it with the restored source. No case uses a persistent/warmed simulator process.

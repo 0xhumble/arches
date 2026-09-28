@@ -1,5 +1,7 @@
 # 第二项研究：新 L2 的缺失并发能力（MSHR）
 
+> 本目录为 16 MiB L3 上的历史探索。用户最终选择的是 **C 的 4 MiB L3 + 384 MSHR**，见 [../selected/README.md](../selected/README.md)；本目录最快配置不再作为提交方案。
+
 ## 实验控制
 
 沿用第一阶段容量研究的最佳三级配置：64 TM、每 8 TM 共享一个 512 KiB L2、16 MiB 全局 L3、L3 延迟 480 周期。Sponza 512×512、同一份 RISC-V ELF、冷缓存启动。
@@ -66,4 +68,4 @@ uv run --with pillow python project4/mshr/analyze.py
 
 `results/` 保存三次正式运行，`repeat/` 保存最佳配置复跑；每次包含原始日志、PNG、完整模拟器源码、构建日志及命令/哈希元数据。`summary.json/csv/md` 为机器可读数据和汇总。
 
-第一阶段 `../results/`、`../summary.*` 和 `../findings.md` 保持为历史证据，不覆写。`../submission/main.cpp`、`../submission/trax_log_my_best.txt` 更新为本轮最佳三级配置；A/B/C 三份提交日志不变。最终 PDF 报告仍未制作。
+第一阶段 `../results/`、`../summary.*` 和 `../findings.md` 保持为历史证据，不覆写。`../submission/main.cpp`、`../submission/trax_log_my_best.txt` 现对应用户最终选定的 C + 384 MSHR（见 `../selected/`），不是本目录的 16 MiB 最快探索配置；A/B/C 三份提交日志不变。最终 PDF 报告仍未制作。

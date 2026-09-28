@@ -10,9 +10,9 @@
 // Project 4: only these configuration constants vary in controlled experiments.
 #define P4_NUM_TMS 64
 #define P4_ENABLE_L3 1
-#define P4_L3_MIB 16
+#define P4_L3_MIB 4
 #define P4_L3_LATENCY 480
-#define P4_L2_MSHRS 768
+#define P4_L2_MSHRS 384
 
 namespace Arches {
 

@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "P4_NUM_TMS": 64,
+    "P4_ENABLE_L3": 1,
+    "P4_L3_MIB": 4,
+    "P4_L3_LATENCY": 480,
+    "P4_L2_MSHRS": 384
+  },
+  "simulation_command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=sponza",
+    "--framebuffer-width=512",
+    "--framebuffer-height=512",
+    "--pregen-rays=0",
+    "--bvh-preset=0",
+    "--bvh-merging=0",
+    "--logging-interval=100000"
+  ],
+  "git_head": "6719a777506ae132391e02189ab4a458914f14f1",
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "main_sha256": "969c7f1d2964b0bc3645631b301041efcd35d7e1755ca281af4f1a7bf7bd1af3",
+  "simulator_sha256": "f81da11fdca2defb4d16e77f92475671d02689b2cf6a2e859d047e78e0785e3b",
+  "wall_seconds": 111.6373296699021,
+  "returncode": 0,
+  "metrics": {
+    "cycles": 1223485,
+    "frame_ms": 0.8075808580858086,
+    "DRAM_read_bytes": 68276352,
+    "DRAM_write_bytes": 1048576,
+    "RT_rays": 777304,
+    "L1d": {
+      "Total": 54647000,
+      "Hits": 41743913,
+      "Half Misses": 1939012,
+      "Misses": 10964075,
+      "MSHR Stalls": 2992115,
+      "Uncached Requests": 262144,
+      "Hits percent": 76.38829761926547,
+      "Half Misses percent": 3.548249675188025,
+      "Misses percent": 20.063452705546506
+    },
+    "L2": {
+      "Total": 10964075,
+      "Hits": 4297907,
+      "Half Misses": 79063,
+      "Misses": 6587105,
+      "MSHR Stalls": 23603232,
+      "Uncached Requests": 262144,
+      "Hits percent": 39.199905144756855,
+      "Half Misses percent": 0.7211096239308834,
+      "Misses percent": 60.07898523131227
+    },
+    "L3": {
+      "Total": 6587105,
+      "Hits": 4449121,
+      "Half Misses": 4348,
+      "Misses": 2133636,
+      "MSHR Stalls": 301,
+      "Uncached Requests": 262144,
+      "Hits percent": 67.54288871970311,
+      "Half Misses percent": 0.06600775302655719,
+      "Misses percent": 32.391103527270324
+    }
+  },
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "image_file_sha256": "9a301b1a690a5fae0de7c5dd89ffb235ffaca2abb5b387d2d9d1f15dec566af1",
+  "image_matches_other_configurations": true
+}

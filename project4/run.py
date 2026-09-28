@@ -33,6 +33,7 @@ CASES = {
     'l2-mshr192': (64, 1, 16, 480, 192),
     'l2-mshr384': (64, 1, 16, 480, 384),
     'l2-mshr768': (64, 1, 16, 480, 768),
+    'c-mshr384': (64, 1, 4, 480, 384),
 }
 # Old capacity/latency cases retain the assignment's 192-MSHR local L2.
 CASES = {name: values + (192,) if len(values) == 4 else values for name, values in CASES.items()}
