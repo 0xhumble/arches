@@ -6,7 +6,7 @@ The first stage (`results/`, `summary.*`, `findings.md`) covers the prescribed A
 
 - Upstream base: `146642691df5b1101a25ba5821dce6a67ece318f` (L3 cache-omit flag support).
 - The Project 3 store-drain and halted-thread correctness fixes are retained.
-- The experimental simulator is `src/arches-v2/main.cpp`. Five `P4_*` constants now select the configuration (the fifth, `P4_L2_MSHRS`, was added for stage two); each run archives its complete `main.cpp`. Old case names explicitly retain 192 local-L2 MSHRs.
+- `src/arches-v2/main.cpp` and `submission/main.cpp` are now the cleaned fixed configuration: prescribed C plus 384 local-L2 MSHRs, with no experiment macros or extra diagnostic counters. Per user instruction this cleanup was not rebuilt or rerun; logs and archived experiment sources remain unchanged. The historical sources used five `P4_*` macros; `run.py` requires one of those archived sources (e.g. `selected/results/c-mshr384/main.cpp`) rather than the cleaned source. Old case names explicitly retain 192 local-L2 MSHRs.
 - Start with [findings.md](findings.md) for the Chinese interpretation. `summary.md`, `summary.csv`, and `summary.json` contain measured results; `results/` contains unedited simulator logs, images, build logs and provenance.
 - **Final user-selected optimization:** start from prescribed C (4 MiB L3, 480 cycles) and change only local-L2 MSHRs from 192 to 384. See [selected/README.md](selected/README.md). `submission/main.cpp` and the required filename `trax_log_my_best.txt` refer to this selected configuration, not the fastest exploratory configuration. A/B/C logs are unchanged. Capacity/latency and 16 MiB MSHR studies remain exploratory evidence, not the final proposal. The PDF report is not yet prepared.
 

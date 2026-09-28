@@ -7,13 +7,6 @@
 #include "trax-kernel/intersect.hpp"
 #include "units/unit-texture.hpp"
 
-// Project 4: only these configuration constants vary in controlled experiments.
-#define P4_NUM_TMS 64
-#define P4_ENABLE_L3 1
-#define P4_L3_MIB 4
-#define P4_L3_LATENCY 480
-#define P4_L2_MSHRS 384
-
 namespace Arches {
 
 namespace ISA {
@@ -363,7 +356,7 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	double core_clock = 1515.0e6;
 	uint num_threads = 8;
 	uint num_tps = 64;
-	uint num_tms = P4_NUM_TMS;
+	uint num_tms = 64;
 	uint64_t stack_size = 1024;
 
 	double dram_clock = 3500.0e6;
@@ -482,36 +475,15 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	UnitL1Cache::PowerConfig l1d_power_config;
 #endif
 
-	const bool use_l3 = P4_ENABLE_L3;
-	const uint tms_per_l2 = 8;
-	_assert(!use_l3 || num_tms % tms_per_l2 == 0);
-
-	// Preserve the original partitioned L2 as the global L3. The new
-	// group-local L2 retains 512 KiB, 160-cycle latency and defaults to 192 MSHRs,
-	// but uses one slice with four banks, as in the assignment.
 	UnitL3Cache::Configuration l3_config = l2_config;
 	UnitL3Cache::PowerConfig l3_power_config;
 	l3_config.level = 3;
-	l3_config.size = (P4_L3_MIB << 20) / num_partitions;
-	l3_config.latency = P4_L3_LATENCY;
-	if(use_l3)
-	{
-		// Override only the new L2 AFTER copying the original config to L3.
-		l2_config.num_mshr = P4_L2_MSHRS;
-		l2_config.num_slices = 1;
-		l2_config.num_banks = 4;
-		l2_config.crossbar_width = l2_config.num_banks;
-	}
-	auto& last_config = use_l3 ? l3_config : l2_config;
+	l3_config.latency = 480;
 
-	printf("Project 4: TMs=%u, L3=%u, L2 latency=%u, L3 latency=%u\n",
-		num_tms, use_l3, l2_config.latency, l3_config.latency);
-	printf("Project 4: L2 total=%u KiB, L3 total=%u KiB\n",
-		(use_l3 ? num_tms / tms_per_l2 : num_partitions) * l2_config.size / 1024,
-		use_l3 ? num_partitions * l3_config.size / 1024 : 0);
-
-	printf("Project 4: L2 MSHRs/slice=%u, L3 MSHRs/slice=%u\n",
-		l2_config.num_mshr, l3_config.num_mshr);
+	l2_config.num_slices = 1;
+	l2_config.num_banks = 4;
+	l2_config.crossbar_width = l2_config.num_banks;
+	l2_config.num_mshr = 384;
 
 	ELF elf(project_folder_path + "src/trax-kernel/riscv/kernel");
 
@@ -539,40 +511,36 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	std::vector<UnitDRAM*> drams;
 	std::vector<UnitL2Cache*> l2s;
 	std::vector<UnitL3Cache*> l3s;
-	auto& last_caches = use_l3 ? l3s : l2s;
-	dram_config.num_ports = last_config.num_slices;
-	last_config.num_ports = last_config.num_slices;
+	dram_config.num_ports = l3_config.num_slices;
+	l3_config.num_ports = l3_config.num_slices;
 	for(uint i = 0; i < num_partitions; ++i)
 	{
 		drams.push_back(_new UnitDRAM(dram_config));
 		simulator.register_unit(drams.back());
 
-		last_config.mem_higher_port = 0;
-		last_config.mem_highers = {drams.back()};
-		last_caches.push_back(_new Units::UnitCache(last_config));
-		simulator.register_unit(last_caches.back());
+		l3_config.mem_higher_port = 0;
+		l3_config.mem_highers = {drams.back()};
+		l3s.push_back(_new UnitL3Cache(l3_config));
+		simulator.register_unit(l3s.back());
 		simulator.new_unit_group();
 
-		xbar_config.mem_highers.push_back(last_caches.back());
+		xbar_config.mem_highers.push_back(l3s.back());
 	}
 
-	xbar_config.num_clients = use_l3 ? num_tms / tms_per_l2 : num_tms;
+	xbar_config.num_clients = num_tms / 8;
 	Units::UnitCrossbar xbar(xbar_config);
 	simulator.register_unit(&xbar);
 	simulator.new_unit_group();
 
-	if(use_l3)
+	l2_config.mem_highers = {&xbar};
+	l2_config.num_ports = 8;
+	for(uint l2_index = 0; l2_index < num_tms / 8; ++l2_index)
 	{
-		l2_config.mem_highers = {&xbar};
-		l2_config.num_ports = tms_per_l2;
-		for(uint l2_index = 0; l2_index < num_tms / tms_per_l2; ++l2_index)
-		{
-			l2_config.mem_higher_port = l2_index;
-			l2s.push_back(_new UnitL2Cache(l2_config));
-			simulator.register_unit(l2s.back());
-		}
-		simulator.new_unit_group();
+		l2_config.mem_higher_port = l2_index;
+		l2s.push_back(_new UnitL2Cache(l2_config));
+		simulator.register_unit(l2s.back());
 	}
+	simulator.new_unit_group();
 
 	std::vector<uint8_t> vec_mem;
 	vec_mem.resize(256 << 20);
@@ -606,7 +574,6 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	simulator.new_unit_group();
 
 	l1d_config.num_ports = num_tps;
-	l1d_config.mem_highers = {&xbar};
 #if TRAX_USE_RT_CORE
 	l1d_config.num_ports += num_tps;
 	l1d_config.crossbar_width *= 2;
@@ -618,10 +585,8 @@ static void run_sim_trax(SimulationConfig& sim_config)
 		std::vector<Units::UnitMemoryBase*> mem_list;
 		std::vector<Units::UnitSFU*> sfu_list;
 
-		l1d_config.mem_highers = use_l3
-			? std::vector<Units::UnitMemoryBase*>{l2s[tm_index / tms_per_l2]}
-			: std::vector<Units::UnitMemoryBase*>{&xbar};
-		l1d_config.mem_higher_port = use_l3 ? tm_index % tms_per_l2 : tm_index;
+		l1d_config.mem_highers = {l2s[tm_index / 8]};
+		l1d_config.mem_higher_port = tm_index % 8;
 		l1ds.push_back(new UnitL1Cache(l1d_config));
 		simulator.register_unit(l1ds.back());
 		mem_list.push_back(l1ds.back());
@@ -731,9 +696,8 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	float delta_ns = delta_s * 1e9;
 	float delta_dram_cycles = delta_s * dram_clock;
 	float peak_dram_bandwidth = dram_clock / core_clock * num_partitions * 4 * 32 / 8;
-	const uint l2_banks = l2s.size() * l2_config.num_slices * l2_config.num_banks;
-	float peak_l2_bandwidth = l2_banks * MemoryRequest::MAX_SIZE;
-	float peak_l3_bandwidth = l3s.size() * l3_config.num_slices * MemoryRequest::MAX_SIZE;
+	float peak_l2_bandwidth = (num_tms / 8) * l2_config.num_banks * MemoryRequest::MAX_SIZE;
+	float peak_l3_bandwidth = num_partitions * l3_config.num_slices * MemoryRequest::MAX_SIZE;
 	float peak_l1d_bandwidth = num_tms * l1d_config.num_banks * MemoryRequest::MAX_SIZE;
 
 	//peak_dram_bandwidth = 32 * core_clock * num_partitions;
@@ -757,22 +721,18 @@ static void run_sim_trax(SimulationConfig& sim_config)
 		printf("Simulation rate: %.2f KHz\n", simulator.current_cycle / simulation_time / 1000.0);
 		printf("                            \n");
 		printf("DRAM Read: %8.1f GB/s  (%.2f%%)\n", (float)dram_delta_log.bytes_read / delta_ns, 100.0f * dram_delta_log.bytes_read / delta / peak_dram_bandwidth);
-		if(use_l3)
-		{
-			printf(" L3$ Read: %8.1f B/clk (%.2f%%)\n", (float)l3_delta_log.bytes_read / delta, 100.0 * l3_delta_log.bytes_read / delta / peak_l3_bandwidth);
-			if(l3_delta_log.get_total())
-				printf(" L3$ Hit/Half/Miss: %3.1f%%/%3.1f%%/%3.1f%%\n", 100.0 * l3_delta_log.hits / l3_delta_log.get_total(), 100.0 * l3_delta_log.half_misses / l3_delta_log.get_total(), 100.0 * l3_delta_log.misses / l3_delta_log.get_total());
-		}
+		printf(" L3$ Read: %8.1f B/clk (%.2f%%)\n", (float)l3_delta_log.bytes_read / delta, 100.0 * l3_delta_log.bytes_read / delta / peak_l3_bandwidth);
+		printf(" L3$ Hit/Half/Miss: %3.1f%%/%3.1f%%/%3.1f%%\n", 100.0 * l3_delta_log.hits / l3_delta_log.get_total(), 100.0 * l3_delta_log.half_misses / l3_delta_log.get_total(), 100.0 * l3_delta_log.misses / l3_delta_log.get_total());
 		printf(" L2$ Read: %8.1f B/clk (%.2f%%)\n", (float)l2_delta_log.bytes_read / delta, 100.0f * l2_delta_log.bytes_read / delta / peak_l2_bandwidth);
 		printf("L1d$ Read: %8.1f B/clk (%.2f%%)\n", (float)l1d_delta_log.bytes_read / delta, 100.0 * l1d_delta_log.bytes_read / delta / peak_l1d_bandwidth);
 		printf("                            \n");
 		printf(" L2$ Hit/Half/Miss: %3.1f%%/%3.1f%%/%3.1f%%\n", 100.0 * l2_delta_log.hits / l2_delta_log.get_total(), 100.0 * l2_delta_log.half_misses / l2_delta_log.get_total(), 100.0 * l2_delta_log.misses / l2_delta_log.get_total());
 		printf("L1d$ Hit/Half/Miss: %3.1f%%/%3.1f%%/%3.1f%%\n", 100.0 * l1d_delta_log.hits / l1d_delta_log.get_total(), 100.0 * l1d_delta_log.half_misses / l1d_delta_log.get_total(), 100.0 * l1d_delta_log.misses / l1d_delta_log.get_total());
 		printf("                            \n");
-		printf(" L2$ Stalls: %0.2f%%\n", 100.0 * l2_delta_log.mshr_stalls / l2_banks / delta);
+		printf(" L2$ Stalls: %0.2f%%\n", 100.0 * l2_delta_log.mshr_stalls / num_partitions / l2_config.num_slices / l2_config.num_banks / delta);
 		printf("L1d$ Stalls: %0.2f%%\n", 100.0 * l1d_delta_log.mshr_stalls / num_tms / l1d_config.num_banks / delta);
 		printf("                            \n");
-		printf("L2$  Occ: %0.2f%%\n", 100.0 * l2_delta_log.get_total() / l2_banks / delta);
+		printf("L2$  Occ: %0.2f%%\n", 100.0 * l2_delta_log.get_total() / num_partitions / l2_config.num_slices / l2_config.num_banks / delta);
 		printf("L1d$ Occ: %0.2f%%\n", 100.0 * l1d_delta_log.get_total() / num_tms / l1d_config.num_banks / delta);
 		printf("                            \n");
 		
@@ -812,14 +772,11 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	printf("DRAM Read: %.1f GB/s (%.2f%%)\n", (float)dram_log.bytes_read / frame_time_ns, 100.0f * dram_log.bytes_read / frame_cycles / peak_dram_bandwidth);
 	dram_log.print(frame_cycles);
 
-	if(use_l3)
-	{
-		print_header("L3$");
-		delta_log(l3_log, l3s);
-		printf(" L3$ Read: %.1f B/clk (%.2f%%)\n", (float)l3_log.bytes_read / frame_cycles, 100.0 * l3_log.bytes_read / frame_cycles / peak_l3_bandwidth);
-		l3_log.print(frame_cycles);
-		total_power += l3_log.print_power(l3_power_config, frame_time);
-	}
+	print_header("L3$");
+	delta_log(l3_log, l3s);
+	printf(" L3$ Read: %.1f B/clk (%.2f%%)\n", (float)l3_log.bytes_read / frame_cycles, 100.0 * l3_log.bytes_read / frame_cycles / peak_l3_bandwidth);
+	l3_log.print(frame_cycles);
+	total_power += l3_log.print_power(l3_power_config, frame_time);
 
 	print_header("L2$");
 	delta_log(l2_log, l2s);
@@ -852,9 +809,6 @@ static void run_sim_trax(SimulationConfig& sim_config)
 
 	print_header("Performance Summary");
 	printf("Cycles: %lld\n", simulator.current_cycle);
-	printf("Project4 counters: DRAM_read_bytes=%llu DRAM_write_bytes=%llu RT_rays=%llu\n",
-		(unsigned long long)dram_log.bytes_read, (unsigned long long)dram_log.bytes_written,
-		(unsigned long long)rtc_log.rays);
 	printf("Clock rate: %.0f MHz\n", core_clock / 1'000'000.0);
 	printf("Frame time: %.3g ms\n", frame_time * 1000.0);
 	if(!rtcs.empty()) printf("MRays/s: %.0f\n", rtc_log.rays / frame_time / 1'000'000.0);
@@ -881,7 +835,6 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	for(auto& rtc : rtcs) delete rtc;
 	for(auto& l2 : l2s) delete l2;
 	for(auto& l3 : l3s) delete l3;
-	for(auto& tu : tus) delete tu;
 	for(auto& dram : drams) delete dram;
 }}}
 
