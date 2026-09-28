@@ -52,8 +52,8 @@ BVH2: Loading: /root/datasets/cache/sponza.bvh
 BVH2: Size: 16.0 MiB
 BVH2: SAH Cost: 5565.83
 BVH2: Build Type: SAH
-BVH7: Collapsing Nodes: 54ms
-BVH7: Total Time: 54ms
+BVH7: Collapsing Nodes: 53ms
+BVH7: Total Time: 53ms
 BVH7: Size: 7.2 MiB
 BVH7: SAH Cost: 1855.41
 BVH7: Leaf Cost: LINEAR
@@ -81,7 +81,7 @@ Starting TRaX
                             
 Cycle: 100000                 
 Threads Launched: 43072        
-Simulation rate: 10.66 KHz
+Simulation rate: 10.80 KHz
                             
 DRAM Read:     84.7 GB/s  (18.91%)
  L3$ Read:    173.2 B/clk (16.92%)
@@ -128,7 +128,7 @@ Stall Cycles: 172952 (86.48%)
                             
 Cycle: 200000                 
 Threads Launched: 72192        
-Simulation rate: 10.64 KHz
+Simulation rate: 10.75 KHz
                             
 DRAM Read:     49.7 GB/s  (11.09%)
  L3$ Read:    245.9 B/clk (24.01%)
@@ -174,7 +174,7 @@ Stall Cycles: 167022 (83.51%)
                             
 Cycle: 300000                 
 Threads Launched: 102208        
-Simulation rate: 10.71 KHz
+Simulation rate: 10.77 KHz
                             
 DRAM Read:     31.4 GB/s  (7.00%)
  L3$ Read:    246.2 B/clk (24.04%)
@@ -220,7 +220,7 @@ Stall Cycles: 168083 (84.04%)
                             
 Cycle: 400000                 
 Threads Launched: 131712        
-Simulation rate: 10.75 KHz
+Simulation rate: 10.76 KHz
                             
 DRAM Read:     26.1 GB/s  (5.82%)
  L3$ Read:    246.2 B/clk (24.04%)
@@ -266,7 +266,7 @@ Stall Cycles: 169015 (84.51%)
                             
 Cycle: 500000                 
 Threads Launched: 158816        
-Simulation rate: 10.77 KHz
+Simulation rate: 10.76 KHz
                             
 DRAM Read:     17.9 GB/s  (3.99%)
  L3$ Read:    247.4 B/clk (24.16%)
@@ -312,7 +312,7 @@ Stall Cycles: 169231 (84.62%)
                             
 Cycle: 600000                 
 Threads Launched: 190624        
-Simulation rate: 10.75 KHz
+Simulation rate: 10.71 KHz
                             
 DRAM Read:     15.4 GB/s  (3.43%)
  L3$ Read:    245.8 B/clk (24.00%)
@@ -358,7 +358,7 @@ Stall Cycles: 161832 (80.92%)
                             
 Cycle: 700000                 
 Threads Launched: 225408        
-Simulation rate: 10.72 KHz
+Simulation rate: 10.66 KHz
                             
 DRAM Read:     16.2 GB/s  (3.61%)
  L3$ Read:    244.8 B/clk (23.90%)
@@ -404,7 +404,7 @@ Stall Cycles: 157240 (78.62%)
                             
 Cycle: 800000                 
 Threads Launched: 259072        
-Simulation rate: 10.70 KHz
+Simulation rate: 10.64 KHz
                             
 DRAM Read:     15.5 GB/s  (3.47%)
  L3$ Read:    244.9 B/clk (23.91%)
@@ -450,7 +450,7 @@ Stall Cycles: 157778 (78.89%)
                             
 Cycle: 900000                 
 Threads Launched: 294912        
-Simulation rate: 10.75 KHz
+Simulation rate: 10.69 KHz
                             
 DRAM Read:     15.4 GB/s  (3.43%)
  L3$ Read:    209.6 B/clk (20.47%)
@@ -1157,6 +1157,6 @@ Power: 0.00 W
 MRays/J: inf
 
 -------------------------------Simulation Summary-------------------------------
-Simulation rate: 10.93 KHz
-Simulation time: 87 s
-MSIPS: 44.78
+Simulation rate: 10.87 KHz
+Simulation time: 88 s
+MSIPS: 44.54

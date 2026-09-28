@@ -1,0 +1,198 @@
+{
+  "workload": {
+    "compiler_command": [
+      "/opt/riscv/bin/riscv64-unknown-elf-g++",
+      "-march=rv64imaf",
+      "-mabi=lp64f",
+      "-mno-relax",
+      "-nostartfiles",
+      "-emain",
+      "-Wstack-usage=512",
+      "-O3",
+      "-ffp-contract=off",
+      "-I",
+      "/root/arches/include",
+      "-I",
+      "/root/arches/src/trax-kernel",
+      "/root/arches/project4/kernel.cpp",
+      "-o",
+      "/root/arches/src/trax-kernel/riscv/kernel"
+    ],
+    "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+    "scene": "sponza",
+    "size": 512,
+    "source_sha256": "51d980e21364ff6f17d7d552e462cdf34ad489381d74d21d72ef6045b4343ae8",
+    "obj_sha256": "18d86a301a09aa7daedb08d316def5f8f99c1daa6836010e363411c7c4cf0206",
+    "mtl_sha256": "3ee148c27a09a00bb739163b6df61304760dcc74f1ba8c6da75d0e69fece749d"
+  },
+  "fixed_l3_mib": 16,
+  "fixed_l3_latency": 480,
+  "best_case": "l2-mshr768",
+  "validation": {
+    "only_l2_mshr_macro_varies": true,
+    "baseline192_reproduces_previous_metrics": true,
+    "all_pixels_identical": true,
+    "all_pixels_opaque": true,
+    "cpu_reference_differing_pixels": 3,
+    "same_total_rays": 777304
+  },
+  "cases": {
+    "l2-mshr192": {
+      "configuration": {
+        "P4_NUM_TMS": 64,
+        "P4_ENABLE_L3": 1,
+        "P4_L3_MIB": 16,
+        "P4_L3_LATENCY": 480,
+        "P4_L2_MSHRS": 192
+      },
+      "metrics": {
+        "cycles": 2193053,
+        "frame_ms": 1.4475597359735974,
+        "DRAM_read_bytes": 17987872,
+        "DRAM_write_bytes": 1048576,
+        "RT_rays": 777304,
+        "L1d": {
+          "Total": 54647000,
+          "Hits": 41569386,
+          "Half Misses": 2113419,
+          "Misses": 10964195,
+          "MSHR Stalls": 6632639,
+          "Uncached Requests": 262144,
+          "Hits percent": 76.06892601606675,
+          "Half Misses percent": 3.8674016871923436,
+          "Misses percent": 20.0636722967409
+        },
+        "L2": {
+          "Total": 10964195,
+          "Hits": 4318701,
+          "Half Misses": 40629,
+          "Misses": 6604865,
+          "MSHR Stalls": 54071109,
+          "Uncached Requests": 262144,
+          "Hits percent": 39.38912979931495,
+          "Half Misses percent": 0.37056072060009876,
+          "Misses percent": 60.240309480084946
+        },
+        "L3": {
+          "Total": 6604865,
+          "Hits": 6042208,
+          "Half Misses": 536,
+          "Misses": 562121,
+          "MSHR Stalls": 301,
+          "Uncached Requests": 262144,
+          "Hits percent": 91.48117334722208,
+          "Half Misses percent": 0.00811523021288096,
+          "Misses percent": 8.510711422565034
+        }
+      },
+      "cpu_reference_differing_pixels": 3
+    },
+    "l2-mshr384": {
+      "configuration": {
+        "P4_NUM_TMS": 64,
+        "P4_ENABLE_L3": 1,
+        "P4_L3_MIB": 16,
+        "P4_L3_LATENCY": 480,
+        "P4_L2_MSHRS": 384
+      },
+      "metrics": {
+        "cycles": 1140945,
+        "frame_ms": 0.7530990099009901,
+        "DRAM_read_bytes": 17983488,
+        "DRAM_write_bytes": 1048576,
+        "RT_rays": 777304,
+        "L1d": {
+          "Total": 54647000,
+          "Hits": 41748176,
+          "Half Misses": 1942751,
+          "Misses": 10956073,
+          "MSHR Stalls": 2835407,
+          "Uncached Requests": 262144,
+          "Hits percent": 76.39609859644628,
+          "Half Misses percent": 3.55509177081999,
+          "Misses percent": 20.04880963273373
+        },
+        "L2": {
+          "Total": 10956073,
+          "Hits": 4290953,
+          "Half Misses": 82357,
+          "Misses": 6582763,
+          "MSHR Stalls": 21549666,
+          "Uncached Requests": 262144,
+          "Hits percent": 39.16506397867192,
+          "Half Misses percent": 0.7517018187082178,
+          "Misses percent": 60.08323420261986
+        },
+        "L3": {
+          "Total": 6582763,
+          "Hits": 6019733,
+          "Half Misses": 1046,
+          "Misses": 561984,
+          "MSHR Stalls": 301,
+          "Uncached Requests": 262144,
+          "Hits percent": 91.44690459006347,
+          "Half Misses percent": 0.015889984190529113,
+          "Misses percent": 8.537205425745997
+        }
+      },
+      "cpu_reference_differing_pixels": 3
+    },
+    "l2-mshr768": {
+      "configuration": {
+        "P4_NUM_TMS": 64,
+        "P4_ENABLE_L3": 1,
+        "P4_L3_MIB": 16,
+        "P4_L3_LATENCY": 480,
+        "P4_L2_MSHRS": 768
+      },
+      "metrics": {
+        "cycles": 951937,
+        "frame_ms": 0.6283412541254125,
+        "DRAM_read_bytes": 17987616,
+        "DRAM_write_bytes": 1048576,
+        "RT_rays": 777304,
+        "L1d": {
+          "Total": 54647000,
+          "Hits": 41917501,
+          "Half Misses": 1745369,
+          "Misses": 10984130,
+          "MSHR Stalls": 2355219,
+          "Uncached Requests": 262144,
+          "Hits percent": 76.70595092136806,
+          "Half Misses percent": 3.1938971947224917,
+          "Misses percent": 20.100151883909454
+        },
+        "L2": {
+          "Total": 10984130,
+          "Hits": 4251249,
+          "Half Misses": 156456,
+          "Misses": 6576425,
+          "MSHR Stalls": 14723759,
+          "Uncached Requests": 262144,
+          "Hits percent": 38.70355685884999,
+          "Half Misses percent": 1.4243822678719207,
+          "Misses percent": 59.87206087327809
+        },
+        "L3": {
+          "Total": 6576425,
+          "Hits": 6012774,
+          "Half Misses": 1538,
+          "Misses": 562113,
+          "MSHR Stalls": 65820,
+          "Uncached Requests": 262144,
+          "Hits percent": 91.42921876247354,
+          "Half Misses percent": 0.023386566409561427,
+          "Misses percent": 8.547394671116907
+        }
+      },
+      "cpu_reference_differing_pixels": 3
+    }
+  },
+  "repeat_checks": {
+    "l2-mshr768": {
+      "all_recorded_metrics_identical": true,
+      "pixels_identical": true,
+      "cycles": 951937
+    }
+  }
+}

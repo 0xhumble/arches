@@ -3,7 +3,7 @@
 
 Run with: uv run --with pillow python project4/run.py
 Refuses to overwrite results; --results selects a new run directory.
-Only the four P4_* constants in simulator main.cpp change between cases.
+Only the P4_* configuration constants in simulator main.cpp change between cases.
 """
 import argparse
 import hashlib
@@ -30,8 +30,13 @@ CASES = {
     'l3-8m-lat576': (64, 1, 8, 576),
     'l3-16m-lat528': (64, 1, 16, 528),
     'l3-16m-lat576': (64, 1, 16, 576),
+    'l2-mshr192': (64, 1, 16, 480, 192),
+    'l2-mshr384': (64, 1, 16, 480, 384),
+    'l2-mshr768': (64, 1, 16, 480, 768),
 }
-MACROS = ('P4_NUM_TMS', 'P4_ENABLE_L3', 'P4_L3_MIB', 'P4_L3_LATENCY')
+# Old capacity/latency cases retain the assignment's 192-MSHR local L2.
+CASES = {name: values + (192,) if len(values) == 4 else values for name, values in CASES.items()}
+MACROS = ('P4_NUM_TMS', 'P4_ENABLE_L3', 'P4_L3_MIB', 'P4_L3_LATENCY', 'P4_L2_MSHRS')
 
 
 def sha(path):
@@ -39,6 +44,7 @@ def sha(path):
 
 
 def variant(template, values):
+    assert len(values) == len(MACROS)
     for key, value in zip(MACROS, values):
         template, count = re.subn(rf'^#define {key} \d+$', f'#define {key} {value}', template, flags=re.M)
         assert count == 1, key
@@ -111,6 +117,8 @@ def main():
     wmeta = json.loads((workload / 'metadata.json').read_text())
     assert (wmeta['scene'], wmeta['size'], wmeta['source_sha256']) == (args.scene, args.size, sha(source))
     assert wmeta['obj_sha256'] == sha(args.dataset_dir / (args.scene + '.obj'))
+    assert wmeta['mtl_sha256'] == sha(args.dataset_dir / (args.scene + '.mtl'))
+    assert wmeta['kernel_sha256'] == sha(workload / 'kernel')
     shutil.copy2(workload / 'kernel', KDIR / 'riscv/kernel')
     shutil.copy2(workload / 'kernel.dump', KDIR / 'riscv/kernel.dump')
     expected_image = None

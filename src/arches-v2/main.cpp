@@ -7,11 +7,12 @@
 #include "trax-kernel/intersect.hpp"
 #include "units/unit-texture.hpp"
 
-// Project 4: only these four constants vary in the controlled experiments.
+// Project 4: only these configuration constants vary in controlled experiments.
 #define P4_NUM_TMS 64
 #define P4_ENABLE_L3 1
 #define P4_L3_MIB 16
 #define P4_L3_LATENCY 480
+#define P4_L2_MSHRS 768
 
 namespace Arches {
 
@@ -486,7 +487,7 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	_assert(!use_l3 || num_tms % tms_per_l2 == 0);
 
 	// Preserve the original partitioned L2 as the global L3. The new
-	// group-local L2 retains 512 KiB, 160-cycle latency and 192 MSHRs,
+	// group-local L2 retains 512 KiB, 160-cycle latency and defaults to 192 MSHRs,
 	// but uses one slice with four banks, as in the assignment.
 	UnitL3Cache::Configuration l3_config = l2_config;
 	UnitL3Cache::PowerConfig l3_power_config;
@@ -495,6 +496,8 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	l3_config.latency = P4_L3_LATENCY;
 	if(use_l3)
 	{
+		// Override only the new L2 AFTER copying the original config to L3.
+		l2_config.num_mshr = P4_L2_MSHRS;
 		l2_config.num_slices = 1;
 		l2_config.num_banks = 4;
 		l2_config.crossbar_width = l2_config.num_banks;
@@ -506,6 +509,9 @@ static void run_sim_trax(SimulationConfig& sim_config)
 	printf("Project 4: L2 total=%u KiB, L3 total=%u KiB\n",
 		(use_l3 ? num_tms / tms_per_l2 : num_partitions) * l2_config.size / 1024,
 		use_l3 ? num_partitions * l3_config.size / 1024 : 0);
+
+	printf("Project 4: L2 MSHRs/slice=%u, L3 MSHRs/slice=%u\n",
+		l2_config.num_mshr, l3_config.num_mshr);
 
 	ELF elf(project_folder_path + "src/trax-kernel/riscv/kernel");
 

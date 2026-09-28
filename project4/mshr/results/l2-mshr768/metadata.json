@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "P4_NUM_TMS": 64,
+    "P4_ENABLE_L3": 1,
+    "P4_L3_MIB": 16,
+    "P4_L3_LATENCY": 480,
+    "P4_L2_MSHRS": 768
+  },
+  "simulation_command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "/root/arches/build/src/arches-v2/arches-v2",
+    "--arch-name=TRaX",
+    "--dataset-dir=/root/datasets",
+    "--scene-name=sponza",
+    "--framebuffer-width=512",
+    "--framebuffer-height=512",
+    "--pregen-rays=0",
+    "--bvh-preset=0",
+    "--bvh-merging=0",
+    "--logging-interval=100000"
+  ],
+  "git_head": "e20eb7ad6c7c4709c454a49364b8d1600a0540d3",
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "main_sha256": "546a922b6c9f45787220dfb8b949ad009d8a40a82afaebca4e7f5669616a348c",
+  "simulator_sha256": "34c32e204c9c5268dada27f50d11a1c477d412512fa9343d81257fbc8b6a8cfa",
+  "wall_seconds": 88.79613088606857,
+  "returncode": 0,
+  "metrics": {
+    "cycles": 951937,
+    "frame_ms": 0.6283412541254125,
+    "DRAM_read_bytes": 17987616,
+    "DRAM_write_bytes": 1048576,
+    "RT_rays": 777304,
+    "L1d": {
+      "Total": 54647000,
+      "Hits": 41917501,
+      "Half Misses": 1745369,
+      "Misses": 10984130,
+      "MSHR Stalls": 2355219,
+      "Uncached Requests": 262144,
+      "Hits percent": 76.70595092136806,
+      "Half Misses percent": 3.1938971947224917,
+      "Misses percent": 20.100151883909454
+    },
+    "L2": {
+      "Total": 10984130,
+      "Hits": 4251249,
+      "Half Misses": 156456,
+      "Misses": 6576425,
+      "MSHR Stalls": 14723759,
+      "Uncached Requests": 262144,
+      "Hits percent": 38.70355685884999,
+      "Half Misses percent": 1.4243822678719207,
+      "Misses percent": 59.87206087327809
+    },
+    "L3": {
+      "Total": 6576425,
+      "Hits": 6012774,
+      "Half Misses": 1538,
+      "Misses": 562113,
+      "MSHR Stalls": 65820,
+      "Uncached Requests": 262144,
+      "Hits percent": 91.42921876247354,
+      "Half Misses percent": 0.023386566409561427,
+      "Misses percent": 8.547394671116907
+    }
+  },
+  "image_pixels_sha256": "4a7ac4cc168e583be0a3dd90c70f001b06aefbe226a617834acba750971e5923",
+  "image_file_sha256": "9a301b1a690a5fae0de7c5dd89ffb235ffaca2abb5b387d2d9d1f15dec566af1",
+  "image_matches_other_configurations": true
+}

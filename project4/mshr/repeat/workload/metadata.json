@@ -1,0 +1,26 @@
+{
+  "compiler_command": [
+    "/opt/riscv/bin/riscv64-unknown-elf-g++",
+    "-march=rv64imaf",
+    "-mabi=lp64f",
+    "-mno-relax",
+    "-nostartfiles",
+    "-emain",
+    "-Wstack-usage=512",
+    "-O3",
+    "-ffp-contract=off",
+    "-I",
+    "/root/arches/include",
+    "-I",
+    "/root/arches/src/trax-kernel",
+    "/root/arches/project4/kernel.cpp",
+    "-o",
+    "/root/arches/src/trax-kernel/riscv/kernel"
+  ],
+  "kernel_sha256": "27aa4e568bfa6644be8ee7e0f817bcfb54a80070b55d775afb47f73717f571c5",
+  "scene": "sponza",
+  "size": 512,
+  "source_sha256": "51d980e21364ff6f17d7d552e462cdf34ad489381d74d21d72ef6045b4343ae8",
+  "obj_sha256": "18d86a301a09aa7daedb08d316def5f8f99c1daa6836010e363411c7c4cf0206",
+  "mtl_sha256": "3ee148c27a09a00bb739163b6df61304760dcc74f1ba8c6da75d0e69fece749d"
+}

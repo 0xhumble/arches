@@ -1,14 +1,14 @@
-# Project 4 — TRaX hardware configuration and L3 capacity study
+# Project 4 — TRaX hardware configuration studies
 
 ## Scope
 
-The experiments in this directory cover the prescribed A/B/C configurations and **only the first proposed research axis: L3 capacity, followed by latency sensitivity**. It does not tune L2 sharing groups, bank counts, MSHRs, merging capacity, clock frequency, or the workload between configurations.
+The first stage (`results/`, `summary.*`, `findings.md`) covers the prescribed A/B/C configurations and L3 capacity/latency sensitivity. The second stage ([mshr/README.md](mshr/README.md)) varies only the new local L2's MSHR count, 192 → 384 → 768, at fixed 16 MiB/480-cycle L3. No sharing-group, bank, subentry, clock-frequency or workload tuning is performed.
 
 - Upstream base: `146642691df5b1101a25ba5821dce6a67ece318f` (L3 cache-omit flag support).
 - The Project 3 store-drain and halted-thread correctness fixes are retained.
-- The experimental simulator is `src/arches-v2/main.cpp`. Four `P4_*` constants select the configuration; each run archives its complete `main.cpp`.
+- The experimental simulator is `src/arches-v2/main.cpp`. Five `P4_*` constants now select the configuration (the fifth, `P4_L2_MSHRS`, was added for stage two); each run archives its complete `main.cpp`. Old case names explicitly retain 192 local-L2 MSHRs.
 - Start with [findings.md](findings.md) for the Chinese interpretation. `summary.md`, `summary.csv`, and `summary.json` contain measured results; `results/` contains unedited simulator logs, images, build logs and provenance.
-- `submission/` contains the four required raw logs and the best **three-level** simulator `main.cpp` (16 MiB, 480 cycles). The original two-level B remains faster overall. This is a staged result package, not the final PDF report.
+- `submission/` contains the four required raw logs and the current best **three-level** simulator `main.cpp` (16 MiB L3, 480 cycles, 768 MSHRs/local L2). A/B/C logs are unchanged; `my_best` now refers to stage two. The original two-level B remains faster overall. This is a staged result package, not the final PDF report.
 
 ## Controlled workload
 
@@ -54,8 +54,14 @@ uv run --with pillow python project4/run.py --results /tmp/project4-results \
 # Cold-start reproducibility check of the best three-level case:
 uv run --with pillow python project4/run.py --results /tmp/project4-repeat --cases l3-16m
 
-# Validate the archived project4/results and project4/repeat; regenerate summaries:
+# Validate the archived first-stage results; regenerate first-stage summaries:
 bash project4/validate.sh
+
+# Stage two, with all other settings fixed:
+uv run --with pillow python project4/run.py --results /tmp/project4-mshr \
+  --cases l2-mshr192 l2-mshr384 l2-mshr768
+# Validate archived stage-two results and generate its separate summaries:
+uv run --with pillow python project4/mshr/analyze.py
 ```
 
 `run.py` refuses to overwrite existing case directories. Compilation and simulation are serial because Arches loads one fixed ELF path. On exit the script restores the original simulator source template; the last executable still corresponds to the last case, so rebuild before manually invoking it with the restored source. No case uses a persistent/warmed simulator process.
@@ -65,7 +71,7 @@ Each run records the configuration, exact command, source/ELF/executable SHA-256
 ## Correctness and interpretation
 
 - A 64² smoke test verifies that A/B/C render the same pixels before the formal runs.
-- Every formal run must produce fully opaque, nonuniform output identical **pixel for pixel** across hardware configurations. The final analysis also compares traced-ray counts and verifies that only the four configuration constants vary between simulator source snapshots.
+- Every formal run must produce fully opaque, nonuniform output identical **pixel for pixel** across hardware configurations. The final analysis also compares traced-ray counts and verifies that only the four configuration constants vary within the first-stage snapshots, and only the L2-MSHR constant varies within the second-stage snapshots.
 - `reference.cpp` + `reference-trace.cpp` provide a CPU software-traversal reference, sharing the scene and geometry library but not the simulator/cache/RT-unit execution path. The host oracle explicitly sequences the RNG coordinates because `vec2(randf(), randf())` has compiler-dependent argument evaluation order; it does not change the RISC-V workload. The reference shader disables FP contraction like the RISC-V kernel, while its traversal translation unit uses native simulator contraction settings.
 - CPU-oracle pixel discrepancies, if any, are recorded explicitly in `validation/checks.json`, not hidden by a tolerance or claimed to be zero. Cross-configuration image equality is always strict. Equal ray totals and near-identical CPU output are useful checks, not a proof of bit-exact geometry equivalence.
 - Report performance using **simulated cycles** (and derived frame time), not host wall time. Host simulation parallelism changes with unit grouping and is not hardware performance.

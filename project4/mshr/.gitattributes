@@ -1,0 +1,2 @@
+results/**/main.cpp -text -whitespace
+repeat/**/main.cpp -text -whitespace
