@@ -1,0 +1,287 @@
+[  0%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/color_sinks.cpp.o
+[  0%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/spdlog.cpp.o
+[  1%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/binary.cpp.o
+[  3%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/file_sinks.cpp.o
+[  4%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o
+[  6%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/async.cpp.o
+[  6%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/convert.cpp.o
+[  8%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/depthguard.cpp.o
+[  8%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/directives.cpp.o
+[  8%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/cfg.cpp.o
+[  9%] Building CXX object _deps/spdlog-build/CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o
+[ 11%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/emit.cpp.o
+[ 13%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/emitfromevents.cpp.o
+[ 13%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/emitter.cpp.o
+[ 14%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/emitterstate.cpp.o
+[ 14%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/emitterutils.cpp.o
+[ 16%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/exceptions.cpp.o
+[ 16%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/exp.cpp.o
+[ 18%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/memory.cpp.o
+[ 19%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/node.cpp.o
+[ 19%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/node_data.cpp.o
+[ 21%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/nodebuilder.cpp.o
+[ 21%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/nodeevents.cpp.o
+[ 22%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/null.cpp.o
+[ 24%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/ostream_wrapper.cpp.o
+[ 24%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/parse.cpp.o
+[ 26%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/parser.cpp.o
+[ 26%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/regex_yaml.cpp.o
+[ 27%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/scanner.cpp.o
+[ 27%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/scanscalar.cpp.o
+[ 29%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/scantag.cpp.o
+[ 31%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/scantoken.cpp.o
+[ 31%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/simplekey.cpp.o
+[ 32%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/singledocparser.cpp.o
+[ 32%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/stream.cpp.o
+[ 34%] Building CXX object _deps/yaml-cpp-build/CMakeFiles/yaml-cpp.dir/src/tag.cpp.o
+[ 34%] Linking CXX static library libspdlog.a
+[ 34%] Built target spdlog
+[ 36%] Linking CXX static library libyaml-cpp.a
+[ 36%] Built target yaml-cpp
+[ 37%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/addr_mapper/impl/rit.cpp.o
+[ 37%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/addr_mapper/impl/linear_mappers.cpp.o
+[ 37%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/base/factory.cpp.o
+[ 39%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/base/stats.cpp.o
+[ 40%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/base/logging.cpp.o
+[ 40%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/base/request.cpp.o
+[ 42%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/base/utils.cpp.o
+[ 42%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR3.cpp.o
+[ 44%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR4-RVRR.cpp.o
+[ 44%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR4-VRR.cpp.o
+[ 45%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR4.cpp.o
+[ 45%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR5-RVRR.cpp.o
+[ 47%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR5-VRR.cpp.o
+[ 49%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/DDR5.cpp.o
+[ 49%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/GDDR6.cpp.o
+[ 50%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/HBM.cpp.o
+[ 50%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/HBM2.cpp.o
+[ 52%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/HBM3.cpp.o
+[ 54%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram/impl/LPDDR5.cpp.o
+[ 54%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/bh_dram_controller.cpp.o
+[ 55%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/dummy_controller.cpp.o
+[ 55%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/generic_dram_controller.cpp.o
+[ 57%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/prac_dram_controller.cpp.o
+[ 57%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/refresh/all_bank_refresh.cpp.o
+[ 59%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/rowpolicy/basic_rowpolicies.cpp.o
+[ 60%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/scheduler/bh_scheduler.cpp.o
+[ 60%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/scheduler/bliss_scheduler.cpp.o
+[ 62%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/scheduler/blocking_scheduler.cpp.o
+[ 62%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/scheduler/generic_scheduler.cpp.o
+[ 63%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/dram_controller/impl/scheduler/prac_scheduler.cpp.o
+[ 65%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/external_wrapper/gem5_frontend.cpp.o
+[ 65%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/memory_trace/loadstore_trace.cpp.o
+[ 67%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/memory_trace/readwrite_trace.cpp.o
+[ 67%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/bhO3/bhO3.cpp.o
+[ 68%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/bhO3/bhcore.cpp.o
+[ 68%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/bhO3/bhllc.cpp.o
+[ 70%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/simpleO3/core.cpp.o
+[ 72%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/simpleO3/llc.cpp.o
+[ 72%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/simpleO3/simpleO3.cpp.o
+[ 73%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/frontend/impl/processor/simpleO3/trace.cpp.o
+[ 73%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/main.cpp.o
+[ 75%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/memory_system/impl/bh_DRAM_system.cpp.o
+[ 77%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/memory_system/impl/dummy_memory_system.cpp.o
+[ 77%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/memory_system/impl/generic_DRAM_system.cpp.o
+[ 78%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/test/test_impl.cpp.o
+[ 78%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/translation/impl/no_translation.cpp.o
+[ 80%] Building CXX object external/CMakeFiles/Ramulator.dir/ramulator2/src/translation/impl/random_translation.cpp.o
+[ 80%] Linking CXX static library libRamulator.a
+[ 80%] Built target Ramulator
+[ 81%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/isa/registers.cpp.o
+[ 83%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/isa/riscv.cpp.o
+[ 83%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/main.cpp.o
+[ 86%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/ramulator/unit-GDDR6.cpp.o
+[ 86%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/simulator/simulator.cpp.o
+[ 86%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/ramulator/config.cpp.o
+[ 86%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/ramulator/unit-addr-mapper.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-dram.hpp:4,
+                 from /root/arches-project5/src/arches-v2/shared-utils.hpp:6,
+                 from /root/arches-project5/src/arches-v2/main.cpp:3:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+In file included from /root/arches-project5/src/arches-v2/isa/riscv.hpp:4,
+                 from /root/arches-project5/src/arches-v2/isa/riscv.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+[ 88%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/ramulator/unit-generic-dram-controller.cpp.o
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = float]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+   98 | }
+      | ^
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = long int]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = unsigned int]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = int]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = short unsigned int]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = unsigned char]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = long unsigned int]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = short int]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+/root/arches-project5/src/arches-v2/isa/riscv.cpp: In function ‘Arches::ISA::RISCV::RegType Arches::ISA::RISCV::reg_type() [with T = signed char]’:
+/root/arches-project5/src/arches-v2/isa/riscv.cpp:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+[ 90%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/trax/unit-rt-core.cpp.o
+[ 90%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-cache-base.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/trax/../unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/trax/unit-rt-core.hpp:6,
+                 from /root/arches-project5/src/arches-v2/units/trax/unit-rt-core.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/trax/../unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/trax/../unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/trax/../unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+[ 91%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-cache.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache-base.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-cache-base.cpp: In constructor ‘Arches::Units::UnitCacheBase::UnitCacheBase(size_t, uint, uint, uint, Policy)’:
+/root/arches-project5/src/arches-v2/units/unit-cache-base.cpp:15:37: warning: conversion from ‘uint64_t’ {aka ‘long unsigned int’} to ‘long unsigned int:48’ changes value from ‘18446744073709551615’ to ‘281474976710655’ [-Woverflow]
+   15 |                 _tag_array[i].tag = ~0x0ull;
+      |                                     ^~~~~~~
+[ 91%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-dram.cpp.o
+[ 93%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-stream-cache.cpp.o
+[ 95%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-texture.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache.hpp:5,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+[ 95%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/units/unit-tp.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-dram.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-dram.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-main-memory-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-cache-base.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-stream-cache.hpp:5,
+                 from /root/arches-project5/src/arches-v2/units/unit-stream-cache.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-texture.hpp:4,
+                 from /root/arches-project5/src/arches-v2/units/unit-texture.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+[ 96%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/util/elf.cpp.o
+[ 96%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/util/file.cpp.o
+In file included from /root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:7,
+                 from /root/arches-project5/src/arches-v2/units/unit-tp.hpp:6,
+                 from /root/arches-project5/src/arches-v2/units/unit-tp.cpp:1:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp: In member function ‘Arches::StreamSchedulerRequest& Arches::StreamSchedulerRequest::operator=(const Arches::StreamSchedulerRequest&)’:
+/root/arches-project5/src/arches-v2/simulator/transactions.hpp:193:9: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 |                 }
+  +++ |+  return *this;
+  193 |         }
+      |         ^
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp: In member function ‘void Arches::Units::MemoryMap::add_unit(Arches::paddr_t, Arches::Units::UnitMemoryBase*, uint, uint)’:
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:48: warning: narrowing conversion of ‘port_id’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                ^~~~~~~
+/root/arches-project5/src/arches-v2/units/unit-memory-base.hpp:109:57: warning: narrowing conversion of ‘num_ports’ from ‘uint’ {aka ‘unsigned int’} to ‘uint16_t’ {aka ‘short unsigned int’} [-Wnarrowing]
+  109 |                 MemoryMapping mapping = {unit, port_id, num_ports, 0};
+      |                                                         ^~~~~~~~~
+[ 98%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/util/stbi.cpp.o
+[ 98%] Building CXX object src/arches-v2/CMakeFiles/arches-v2.dir/util/string.cpp.o
+In file included from /root/arches-project5/src/arches-v2/util/stbi.cpp:10:
+/root/arches-project5/src/arches-v2/util/stb_image.h: In function ‘int stbi__parse_png_file(stbi__png*, int, int)’:
+/root/arches-project5/src/arches-v2/util/stb_image.h:4882:56: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 4882 |                   for (k = 0; k < s->img_n; ++k) tc[k] = (stbi_uc)(stbi__get16be(s) & 255) * stbi__depth_scale_table[z->depth]; // non 8-bit images will be larger
+      |                                                  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/arches-project5/src/arches-v2/util/stb_image.h:4801:25: note: at offset 3 into destination object ‘tc’ of size 3
+ 4801 |    stbi_uc has_trans=0, tc[3]={0};
+      |                         ^~
+[100%] Linking CXX executable arches-v2
+[100%] Built target arches-v2
+EXIT=0
